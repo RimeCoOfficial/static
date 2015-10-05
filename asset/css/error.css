@@ -1,0 +1,16 @@
+/* Make something awesome! */
+
+/* color scheme - white: #FFF, pink: #D90472, gray: #919191, dark gray: #35424A, */
+
+html, body { height: 100%; }
+
+body {
+  letter-spacing: 0.02em;
+  word-wrap: break-word;
+  text-rendering: optimizeLegibility;
+}
+
+.logo { margin-top: 10px; margin-bottom: 15px; }
+.error-img { margin-top: 10px; margin-bottom: 15px; }
+
+section.main .container { padding-top: 50px; padding-bottom: 200px; max-width: 500px; }
