@@ -308,3 +308,5 @@ body>footer .list-group-item { background-color: transparent; border: 0; float: 
 .panel-group .panel-heading+.panel-collapse>.panel-body, .panel-group .panel-heading+.panel-collapse>.list-group {
   border-top-color: transparent;
 }
+
+.user-link-icons { padding: 0 15px 15px 0; }
