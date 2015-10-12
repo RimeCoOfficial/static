@@ -309,4 +309,5 @@ body>footer .list-group-item { background-color: transparent; border: 0; float: 
   border-top-color: transparent;
 }
 
-.user-link-icons { padding: 0 15px 15px 0; }
+.user-link-icons { padding-right: 15px; }
+.user-link-icons i { vertical-align: 50%; }
