@@ -311,3 +311,9 @@ body>footer .list-group-item { background-color: transparent; border: 0; float: 
 
 .user-link-icons { padding-right: 15px; }
 .user-link-icons i { vertical-align: 50%; }
+
+.ias-trigger { display: block; padding: 5px 10px;
+    /*font-size: 14px;*/
+    line-height: 1.5;
+    border-radius: 0; background-color: #f9f9f9; margin-bottom: 20px; }
+.ias-trigger a { color: #333; }
