@@ -32,7 +32,7 @@ h1 { font-size:18px; font-weight: bold; color:#333; line-height: 150%; font-fami
 
 hr { margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid #eee; box-sizing: content-box; height: 0; }
 
-p.footer { font-size:12px; line-height:150%; color:#777777; /*text-align:justify;*/ }
+p.footer { font-size:12px; line-height:150%; color:#777777; text-align:justify; }
 p.footer a { color: #777777;  }
 
 a.btn {
