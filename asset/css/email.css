@@ -1,0 +1,50 @@
+/* Make something awesome! */
+
+/* -- color scheme 
+@brand-primary:           #DA2E75
+
+@gray-darker:             lighten(@gray-base, 13.5%)  // #222222
+@gray-dark:               lighten(@gray-base, 20%)    // #333333
+@gray:                    lighten(@gray-base, 33.5%)  // #555555
+@gray-light:              lighten(@gray-base, 46.7%)  // #777777
+@gray-lighter:            lighten(@gray-base, 93.5%)  // #eeeeee
+// f9f9f9
+*/
+
+* { font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+
+.white-space {
+  white-space: pre;           /* CSS 2.0 */
+  white-space: pre-wrap;      /* CSS 2.1 */
+  white-space: pre-line;      /* CSS 3.0 */
+  white-space: -pre-wrap;     /* Opera 4-6 */
+  white-space: -o-pre-wrap;   /* Opera 7 */
+  white-space: -moz-pre-wrap; /* Mozilla */
+  white-space: -hp-pre-wrap;  /* HP Printers */
+}
+
+a { color: #DA2E75; }
+
+img { display:inline-block; width:100%; max-width:100%; }
+img.brand { width: 150px; }
+
+h1 { font-size:18px; font-weight: bold; color:#333; line-height: 150%; font-family:Helvetica Neue,Helvetica,sans-serif; }
+
+hr { margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid #eee; box-sizing: content-box; height: 0; }
+
+p.footer { font-size:12px; line-height:150%; color:#777777; /*text-align:justify;*/ }
+p.footer a { color: #777777;  }
+
+a.btn {
+  font-size: 14px;
+  color: white;
+  width: 300px;
+  font-weight: 300;
+  background-color: #DA2E75;
+  padding: 10px 7px;
+  width:100%;
+  max-width: 300px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
