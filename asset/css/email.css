@@ -11,7 +11,30 @@
 // f9f9f9
 */
 
+/* ------------------------------------- 
+    GLOBAL 
+------------------------------------- */
+* { 
+  /*margin: 0;*/
+  padding: 0;
+}
 * { font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+
+body {
+  -webkit-font-smoothing: antialiased; 
+  -webkit-text-size-adjust: none; 
+  /*width: 100%!important; */
+  /*height: 100%;*/
+}
+
+/* ------------------------------------- 
+    ELEMENTS 
+------------------------------------- */
+a { color: #DA2E75; }
+
+img { display:inline-block; width:100%; max-width:100%; }
+
+hr { margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid #eee; box-sizing: content-box; height: 0; }
 
 .white-space {
   white-space: pre;           /* CSS 2.0 */
@@ -23,28 +46,63 @@
   white-space: -hp-pre-wrap;  /* HP Printers */
 }
 
-a { color: #DA2E75; }
-
-img { display:inline-block; width:100%; max-width:100%; }
-img.brand { width: 150px; }
-
-h1 { font-size:18px; font-weight: bold; color:#333; line-height: 150%; font-family:Helvetica Neue,Helvetica,sans-serif; }
-
-hr { margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid #eee; box-sizing: content-box; height: 0; }
-
-p.footer { font-size:12px; line-height:150%; color:#777777; text-align:justify; }
-p.footer a { color: #777777;  }
-
 a.btn {
   font-size: 14px;
   color: white;
-  width: 300px;
-  font-weight: 300;
+  font-weight: bold;
   background-color: #DA2E75;
-  padding: 10px 7px;
-  width:100%;
-  max-width: 300px;
+  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  margin-bottom: 1em;
 }
+a.btn-block { padding: 10px 0px; width:100%; }
+/*a.btn-lg { width: 100%; max-width: 300px; }*/
+
+/* ------------------------------------- 
+    HEADER 
+------------------------------------- */
+img.brand { width: 150px; }
+
+
+/* ------------------------------------- 
+    TYPOGRAPHY 
+------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: font-family:Helvetica Neue,Helvetica,sans-serif;
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333333;
+  font-weight: bold;
+}
+
+h1 { font-weight: bold; font-size: 22px;}
+h2 { font-weight: bold; font-size: 20px;}
+h3 { font-weight: bold; font-size: 18px;}
+h4 { font-weight: bold; font-size: 16px;}
+h5 { font-weight: bold; font-size: 14px;}
+h6 { font-weight: bold; font-size: 13px; text-transform: uppercase; }
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small { font-weight: normal; font-size: 80%; color: #777777; line-height: 0; text-transform: none; }
+
+p, ul { 
+  margin-bottom: 10px; 
+  font-weight: normal; 
+  font-size: 14px;
+  line-height: 1.6;
+}
+p.lead { font-size: 17px; }
+p.last { margin-bottom: 0px; }
+
+ul li {
+  margin-left:5px;
+  list-style-position: inside;
+}
+
+/* ------------------------------------- 
+    FOOTER 
+------------------------------------- */
+p.footer { font-size:12px; line-height:150%; color:#777777; text-align:justify; }
+p.footer a { color: #777777;  }
