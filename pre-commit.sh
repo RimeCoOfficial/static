@@ -16,58 +16,44 @@ echo "Renaming files"
 # create empty errors array
 declare -a errors
 
-# Check if we're on a semi-secret empty tree
-if git rev-parse --verify HEAD
-then
-  against=HEAD
-else
-  # Initial commit: diff against an empty tree object
-  against=4b825dc642cb6eb9a060e54bf8d69288fbee4904
-fi
+# # Check if we're on a semi-secret empty tree
+# if git rev-parse --verify HEAD
+# then
+#   against=HEAD
+# else
+#   # Initial commit: diff against an empty tree object
+#   against=4b825dc642cb6eb9a060e54bf8d69288fbee4904
+# fi
 
-# fetch all changed php files and validate them
-files=$(git diff-index --name-only --diff-filter=ACMR $against | grep '\.css$')
+# # fetch all changed php files and validate them
+# files=$(git diff-index --name-only --diff-filter=ACMR $against | grep '\.css$')
+files=$(git diff --name-only HEAD | grep 'asset/css/.*\.css$')
 if [ -n "$files" ]; then
 
-  echo 'Checking NEW Files'
+  echo 'Checking New Files'
 
   for file in $files; do
 
-    # output=`esvalidate $file`
+    fname=$(basename "$file")
+    dest=$(dirname "$file")
+    ext="${fname##*.}"
 
-    # # if our output is not empty, there were errors
-    # if [ -n "$output" ]; then
-    #   echo "$file contains javascript syntax errors"
-    #   echo $output
-    #   errors=("${errors[@]}" "$output")
-    # fi
+    # hex_date=$(date +"%Y%m%d%H%m%S")
+    # hex_date=$(date +"%s")  
+    # random_hash=$(printf "%x\n" $hex_date)
+    random_hash=$(hexdump -e '/1 "%02x"' -n 2 < /dev/urandom)
+    dest_fname="$dest/${fname%.*}-$random_hash.min.$ext"
 
-    fname=$(basename "$1")
-    echo "$fname"
+    # @todo: minify
+
+    cp "$file" "$dest_fname"
+    echo "$fname => $dest_fname"
+
+    git add "$dest_fname"
+    echo "Done."
 
   done
 fi
-
-
-# function _c
-# {
-#     fname=$(basename "$1")
-#     dest=$(dirname "$1")
-#     ext="${fname##*.}"
-#     dest_fname="$dest/${fname%.*}.min.$ext"
-#     echo "Compressing $1..."
-#     $YUIC $1 > $dest_fname
-#     git add $dest_fname
-#     echo "Done."
-#     echo ""
-# }
-
-# for file in $(ls web-app/js/*.js web-app/css/*.css|grep -vi min.);
-# do
-#     _c $file
-# done
-
-# date +"%Y%m%d-%H%m%S%z"
 
 # # create empty errors array
 # declare -a errors
