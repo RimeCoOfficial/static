@@ -26,8 +26,8 @@ declare -a errors
 # fi
 
 # # fetch all changed php files and validate them
-# files=$(git diff-index --name-only --diff-filter=ACMR $against | grep '\.css$')
-files=$(git diff --name-only HEAD | grep 'asset/css/.*\.css$')
+files=$(git diff-index --name-only --diff-filter=ACMR $against | grep 'asset/css/.*\.css$')
+# files=$(git diff --name-only HEAD | grep 'asset/css/.*\.css$')
 if [ -n "$files" ]; then
 
   echo 'Checking New Files'
