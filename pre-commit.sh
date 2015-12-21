@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/sh
 #
 # This script checks if all added, copied, modified or renamed files are valid against the PSR2 coding standards
 # and if there are no php, javascript or css errors
@@ -34,7 +34,7 @@ if [ -n "$files" ]; then
 fi
 
 
-echo '2. Renaming CSS files'
+echo '2. Minify JS/CSS files'
 
 # # Check if we're on a semi-secret empty tree
 # if git rev-parse --verify HEAD
@@ -48,7 +48,7 @@ echo '2. Renaming CSS files'
 # # fetch all changed php files and validate them
 # files=$(git diff-index --name-only --diff-filter=ACMR $against | grep 'asset/css/.*\.css$')
 
-files=$(git diff --name-only HEAD | grep 'test/.*\.css$')
+files=$(git diff --name-only HEAD | grep 'test/javascripts/.*\.js$|test/stylesheets/.*\.css$')
 if [ -n "$files" ]; then
 
   for file in $files; do
@@ -69,15 +69,52 @@ if [ -n "$files" ]; then
 
     # @todo: minify
 
+    # @todo: remove old *-vXXXXXXXX.min.ext file
+
     echo "$fname => $dest_fname"
-    cp "$file" "$dest_fname"
-    git add "$dest_fname"
+    # cp "$file" "$dest_fname"
+    # git add "$dest_fname"
 
   done
 
   echo "Done."
 fi
 
+
+echo '3. Versioning images'
+
+files=$(git diff --name-only HEAD | grep 'test/images.*')
+if [ -n "$files" ]; then
+
+  for file in $files; do
+
+    fname=$(basename "$file")
+    dest_dir=$(dirname "$file")
+    ext="${fname##*.}"
+
+    random_hash=$(echo $RANDOM $RANDOM $RANDOM $RANDOM $RANDOM | md5 | cut -c -8)
+    
+    dest_fname="$dest_dir/${fname%.*}-v$random_hash.$ext"
+
+    # remove old *-vXXXXXXXX.ext file
+
+    # echo $dest_dir
+
+    # find test -maxdepth 1 | grep "email-v[0-9a-f]\{8\}.min.css" -c
+    # old_file=find $dest_dir -type f -maxdepth 1 | grep "$fname-v[0-9a-f]\{8\}.$ext"
+    
+    # echo $old_file
+    # echo $(find $dest_dir -type f -maxdepth 1 | grep "$fname-v[0-9a-f]\{8\}.$ext")
+
+
+    echo "$fname => $dest_fname"
+    mv "$file" "$dest_fname"
+    git add "$dest_fname"
+
+  done
+
+  echo "Done."
+fi
 
 # if we have errors, exit with 1
 if [ -n "$errors" ]; then
