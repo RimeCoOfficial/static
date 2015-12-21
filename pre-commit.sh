@@ -70,8 +70,8 @@ if [ -n "$files" ]; then
     # @todo: minify
 
     echo "$fname => $dest_fname"
-    # cp "$file" "$dest_fname"
-    # git add "$dest_fname"
+    cp "$file" "$dest_fname"
+    git add "$dest_fname"
 
   done
 
