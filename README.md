@@ -15,16 +15,13 @@ sh pre-commit-setup.sh
 
 ## Dependencies
 
-### YUI Compressor
+### YUI Compressor ([yui.github.io](http://yui.github.io/yuicompressor/))
 
 ``` shell
 brew install yuicompressor
 ```
 
-- Java runtime required http://www.java.com/en/download/mac_download.jsp
-
-
-- YUI http://yui.github.io/yuicompressor/
+JDK required http://www.java.com/en/download/mac_download.jsp
 
 ## References
 

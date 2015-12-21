@@ -33,7 +33,7 @@ echo '2. Minify JS/CSS files'
 # # fetch all changed php files and validate them
 # files=$(git diff-index --name-only --diff-filter=ACMR $against | grep 'asset/css/.*\.css$')
 
-files=$(git diff --name-only HEAD | egrep 'test/(javascripts|stylesheets)/.*')
+files=$(git diff --name-only HEAD | egrep '(javascripts|stylesheets)/.*')
 if [ -n "$files" ]; then
 
   for file in $files; do
@@ -88,7 +88,7 @@ fi
 
 echo '3. Versioning images'
 
-files=$(git diff --name-only HEAD | grep 'test/images/.*')
+files=$(git diff --name-only HEAD | grep 'images/.*')
 if [ -n "$files" ]; then
 
   for file in $files; do
