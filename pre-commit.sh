@@ -16,22 +16,7 @@ declare -a errors
 
 
 echo "1. Adding untracked Files"
-
-files=$(git status -s)
-if [ -n "$files" ]; then
-
-  prev_file='!!'
-
-  for file in $files; do
-
-    if [ $prev_file == '??' ]; then
-      echo "++ $file"
-      git add "$file"
-    fi
-
-    prev_file=$file
-  done
-fi
+git add "."
 
 
 echo '2. Minify JS/CSS files'
@@ -48,36 +33,50 @@ echo '2. Minify JS/CSS files'
 # # fetch all changed php files and validate them
 # files=$(git diff-index --name-only --diff-filter=ACMR $against | grep 'asset/css/.*\.css$')
 
-files=$(git diff --name-only HEAD | grep 'test/javascripts/.*\.js$|test/stylesheets/.*\.css$')
+files=$(git diff --name-only HEAD | grep 'test/javascripts/.*')
 if [ -n "$files" ]; then
 
   for file in $files; do
 
-    fname=$(basename "$file")
-    dest=$(dirname "$file")
-    ext="${fname##*.}"
+    file_name_ext=$(basename "$file")
+    dest_dir=$(dirname "$file")
+    file_name="${file_name_ext%.*}"
+    file_ext="${file_name_ext##*.}" 
 
     # hex_date=$(date +"%Y%m%d%H%m%S")
-    # hex_date=$(date +"%s")  
+    # hex_date=$(date +"%s")
     # random_hash=$(printf "%x\n" $hex_date)
 
     # random_hash=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
     # random_hash=$(hexdump -e '/1 "%02x"' -n 4 < /dev/urandom)
     random_hash=$(echo $RANDOM $RANDOM $RANDOM $RANDOM $RANDOM | md5 | cut -c -8)
     
-    dest_fname="$dest/${fname%.*}-v$random_hash.min.$ext"
+    dest_file="$dest_dir/$file_name-v$random_hash.min.$file_ext"
 
-    # @todo: minify
+    # minify
+    echo "Searching for YUI Compressor..."
+    YUIC=`which yuicompressor`
 
-    # @todo: remove old *-vXXXXXXXX.min.ext file
+    if ! [ $YUIC ]; then
+      echo "Unable to find YUI Compressor! Goodbye!"
+      exit
+    fi
 
-    echo "$fname => $dest_fname"
-    # cp "$file" "$dest_fname"
-    # git add "$dest_fname"
+    echo "YUI Compressor found! Start compressing..."
+
+    echo "$file_name_ext => $dest_file"
+
+    $YUIC $file > $dest_file
+    git add $dest_file
+
+    # remove old *-vXXXXXXXX.min.ext file
+    old_file=`find "$dest_dir" -maxdepth 1 | grep "$file_name-v[0-9a-f]\{8\}.min.$file_ext" -m1`
+    if [ ! -z "$old_file" ]; then
+      echo "-- $old_file"
+      git rm "$old_file"
+    fi
 
   done
-
-  echo "Done."
 fi
 
 
@@ -88,29 +87,27 @@ if [ -n "$files" ]; then
 
   for file in $files; do
 
-    fname_ext=$(basename "$file")
+    file_name_ext=$(basename "$file")
     dest_dir=$(dirname "$file")
-    fname="${fname_ext%.*}"
-    ext="${fname_ext##*.}"    
+    file_name="${file_name_ext%.*}"
+    file_ext="${file_name_ext##*.}"    
 
     random_hash=$(echo $RANDOM $RANDOM $RANDOM $RANDOM $RANDOM | md5 | cut -c -8)
     
-    dest_fname_ext="$dest_dir/$fname-v$random_hash.$ext"
+    dest_file="$dest_dir/$file_name-v$random_hash.$file_ext"
 
     # remove old *-vXXXXXXXX.ext file
     # find test/images -maxdepth 1 | grep "checkerbg-v[0-9a-f]\{8\}.gif" -m1
-    old_file=`find "$dest_dir" -maxdepth 1 | grep "$fname-v[0-9a-f]\{8\}.$ext" -m1`
+    old_file=`find "$dest_dir" -maxdepth 1 | grep "$file_name-v[0-9a-f]\{8\}.$file_ext" -m1`
     if [ ! -z "$old_file" ]; then
       echo "-- $old_file"
       git rm "$old_file"
     fi
 
-    echo "=> $fname_ext $dest_fname_ext"
-    git mv "$file" "$dest_fname_ext"
+    echo "$file_name_ext => $dest_file"
+    git mv "$file" "$dest_file"
 
   done
-
-  echo "Done."
 fi
 
 # if we have errors, exit with 1
