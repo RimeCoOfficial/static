@@ -106,11 +106,8 @@ if [ -n "$files" ]; then
     # echo $old_file
     # echo $(find $dest_dir -type f -maxdepth 1 | grep "$fname-v[0-9a-f]\{8\}.$ext")
 
-
     echo "$fname => $dest_fname"
-    mv "$file" "$dest_fname"
-    git checkout -- $file
-    git add "$dest_fname"
+    git mv "$file" "$dest_fname"
 
   done
 
