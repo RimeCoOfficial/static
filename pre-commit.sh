@@ -100,12 +100,13 @@ if [ -n "$files" ]; then
     # remove old *-vXXXXXXXX.ext file
     # find test/images -maxdepth 1 | grep "checkerbg-v[0-9a-f]\{8\}.gif" -m1
     old_file=`find "$dest_dir" -maxdepth 1 | grep "$fname-v[0-9a-f]\{8\}.$ext" -m1`
-    
-    echo "-- $old_file"
-    git checkout "$old_file"
+    if [ ! -z "$old_file" ]; then
+      echo "-- $old_file"
+      git rm "$old_file"
+    fi
 
-    echo "$fname_ext => $dest_fname_ext"
-    git mv "$file" "$dest_fname"
+    echo "=> $fname_ext $dest_fname_ext"
+    git mv "$file" "$dest_fname_ext"
 
   done
 
