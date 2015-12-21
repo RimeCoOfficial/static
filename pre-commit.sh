@@ -88,25 +88,23 @@ if [ -n "$files" ]; then
 
   for file in $files; do
 
-    fname=$(basename "$file")
+    fname_ext=$(basename "$file")
     dest_dir=$(dirname "$file")
-    ext="${fname##*.}"
+    fname="${fname_ext%.*}"
+    ext="${fname_ext##*.}"    
 
     random_hash=$(echo $RANDOM $RANDOM $RANDOM $RANDOM $RANDOM | md5 | cut -c -8)
     
-    dest_fname="$dest_dir/${fname%.*}-v$random_hash.$ext"
+    dest_fname_ext="$dest_dir/$fname-v$random_hash.$ext"
 
     # remove old *-vXXXXXXXX.ext file
-
-    # echo $dest_dir
-
-    # find test -maxdepth 1 | grep "email-v[0-9a-f]\{8\}.min.css" -c
-    # old_file=find $dest_dir -type f -maxdepth 1 | grep "$fname-v[0-9a-f]\{8\}.$ext"
+    # find test/images -maxdepth 1 | grep "checkerbg-v[0-9a-f]\{8\}.gif" -m1
+    old_file=`find "$dest_dir" -maxdepth 1 | grep "$fname-v[0-9a-f]\{8\}.$ext" -m1`
     
-    # echo $old_file
-    # echo $(find $dest_dir -type f -maxdepth 1 | grep "$fname-v[0-9a-f]\{8\}.$ext")
+    echo "-- $old_file"
+    git checkout "$old_file"
 
-    echo "$fname => $dest_fname"
+    echo "$fname_ext => $dest_fname_ext"
     git mv "$file" "$dest_fname"
 
   done
