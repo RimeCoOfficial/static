@@ -53,6 +53,13 @@ if [ -n "$files" ]; then
     
     dest_file="$dest_dir/$file_name-v$random_hash.min.$file_ext"
 
+    # remove old *-vXXXXXXXX.min.ext file
+    old_file=`find "$dest_dir" -maxdepth 1 | grep "$file_name-v[0-9a-f]\{8\}.min.$file_ext" -m1`
+    if [ ! -z "$old_file" ]; then
+      echo "-- $old_file"
+      git rm "$old_file"
+    fi
+
     # minify
     echo "Searching for YUI Compressor..."
     YUIC=`which yuicompressor`
@@ -74,13 +81,6 @@ if [ -n "$files" ]; then
     # fi
 
     git add "$dest_file"
-
-    # remove old *-vXXXXXXXX.min.ext file
-    old_file=`find "$dest_dir" -maxdepth 1 | grep "$file_name-v[0-9a-f]\{8\}.min.$file_ext" -m1`
-    if [ ! -z "$old_file" ]; then
-      echo "-- $old_file"
-      git rm "$old_file"
-    fi
 
   done
 fi
