@@ -3,20 +3,14 @@
 This is a pre commit script that checks added, copied, modified or renamed files for:
 
 - Minify js/css
-- File name add hash to escape browser cache
+- Dynamic revision (add hash to file name) to escape browser cache
 - ~~syntax errors and PSR2 coding standards.~~
 
 ## Installation
 
 ``` shell
-# create new hooks folder
-mkdir .git/hooks
-
-# move pre-commit to new hooks folder
-ln -fs pre-commit.sh .git/hooks/pre-commit
-
-# don't forget to make the pre-commit file executable
-chmod +x .git/hooks/pre-commit
+# Run from repository root dir
+bash pre-commit-setup.sh
 ```
 
 ## Dependencies

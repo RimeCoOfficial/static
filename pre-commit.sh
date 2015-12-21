@@ -11,10 +11,30 @@
 # @version  1.0.0
 # @author Shubhajit Saha <www@suvozit.com>
 
-echo "Renaming files"
-
 # create empty errors array
 declare -a errors
+
+
+echo "1. Adding untracked Files"
+
+files=$(git status -s)
+if [ -n "$files" ]; then
+
+  prev_file='!!'
+
+  for file in $files; do
+
+    if [ $prev_file == '??' ]; then
+      echo "++ $file"
+      git add "$file"
+    fi
+
+    prev_file=$file
+  done
+fi
+
+
+echo '2. Renaming CSS files'
 
 # # Check if we're on a semi-secret empty tree
 # if git rev-parse --verify HEAD
@@ -26,11 +46,10 @@ declare -a errors
 # fi
 
 # # fetch all changed php files and validate them
-files=$(git diff-index --name-only --diff-filter=ACMR $against | grep 'asset/css/.*\.css$')
-# files=$(git diff --name-only HEAD | grep 'asset/css/.*\.css$')
-if [ -n "$files" ]; then
+# files=$(git diff-index --name-only --diff-filter=ACMR $against | grep 'asset/css/.*\.css$')
 
-  echo 'Checking New Files'
+files=$(git diff --name-only HEAD | grep 'test/.*\.css$')
+if [ -n "$files" ]; then
 
   for file in $files; do
 
@@ -41,129 +60,28 @@ if [ -n "$files" ]; then
     # hex_date=$(date +"%Y%m%d%H%m%S")
     # hex_date=$(date +"%s")  
     # random_hash=$(printf "%x\n" $hex_date)
-    random_hash=$(hexdump -e '/1 "%02x"' -n 2 < /dev/urandom)
-    dest_fname="$dest/${fname%.*}-$random_hash.min.$ext"
+
+    # random_hash=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
+    # random_hash=$(hexdump -e '/1 "%02x"' -n 4 < /dev/urandom)
+    random_hash=$(echo $RANDOM $RANDOM $RANDOM $RANDOM $RANDOM | md5 | cut -c -8)
+    
+    dest_fname="$dest/${fname%.*}-v$random_hash.min.$ext"
 
     # @todo: minify
 
-    cp "$file" "$dest_fname"
     echo "$fname => $dest_fname"
-
-    git add "$dest_fname"
-    echo "Done."
+    # cp "$file" "$dest_fname"
+    # git add "$dest_fname"
 
   done
+
+  echo "Done."
 fi
 
-# # create empty errors array
-# declare -a errors
 
-# # Check if we're on a semi-secret empty tree
-# if git rev-parse --verify HEAD
-# then
-#  against=HEAD
-# else
-#  # Initial commit: diff against an empty tree object
-#  against=4b825dc642cb6eb9a060e54bf8d69288fbee4904
-# fi
-
-# # fetch all changed php files and validate them
-# files=$(git diff-index --name-only --diff-filter=ACMR $against | grep '\.php$')
-# if [ -n "$files" ]; then
-
-#  echo 'Checking PHP Files'
-#  echo '------------------'
-#  echo
-
-#  for file in $files; do
-
-#    # first check if they are valid php files
-#    output=`php -l $file | grep 'Errors parsing'`
-
-#    # if it did contain errors, we have output
-#    if [ -n "$output" ]; then
-#      echo "$file contains php syntax errors"
-#      errors=("${errors[@]}" "$output")
-#    fi
-
-#    # checks if the phpcs output contains '| ERROR |'
-#    output=`phpcs --standard=PSR2 --extensions=php --encoding=utf8 --report=full $file | grep '| ERROR |'`
-
-#    # if it did contain errors, we have output
-#    if [ -n "$output" ]; then
-#      echo "$file fails coding standards"
-#      phpcs --standard=PSR2 --extensions=php --encoding=utf8 --report=full $file
-#      errors=("${errors[@]}" "$output")
-#    fi
-#  done
-# fi
-
-# # fetch all changed js files and validate them
-# files=$(git diff-index --name-only --diff-filter=ACMR $against | grep '\.js$')
-# if [ -n "$files" ]; then
-
-#  echo
-#  echo 'Checking Javascript Files'
-#  echo '------------------'
-#  echo
-
-#  for file in $files; do
-#    output=`esvalidate $file`
-
-#    # if our output is not empty, there were errors
-#    if [ -n "$output" ]; then
-#      echo "$file contains javascript syntax errors"
-#      echo $output
-#      errors=("${errors[@]}" "$output")
-#    fi
-#  done
-# fi
-
-# # fetch all changed css files and validate them
-# files=$(git diff-index --name-only --diff-filter=ACMR $against | grep '\.css$')
-# if [ -n "$files" ]; then
-
-#  echo
-#  echo 'Checking CSS Files'
-#  echo '------------------'
-#  echo
-
-#  for file in $files; do
-#    output=`csslint --format=compact $file | grep 'Error -'`
-
-#    # if our output is not empty, there were errors
-#    if [ -n "$output" ]; then
-#      echo "$file contains css syntax errors"
-#      echo $output
-#      errors=("${errors[@]}" "$output")
-#    fi
-#  done
-# fi
-
-# # fetch all changed css files and validate them
-# files=$(git diff-index --name-only --diff-filter=ACMR $against | grep -E '\.s(c|a)ss$')
-# if [ -n "$files" ]; then
-
-#  echo
-#  echo 'Checking SCSS Files'
-#  echo '------------------'
-#  echo
-
-#  for file in $files; do
-#    output=`scss-lint $file | grep '\[E\]'`
-
-#    # if our output is not empty, there were errors
-#    if [ -n "$output" ]; then
-#      echo "$file contains scss syntax errors"
-#      scss-lint $file | grep '\[E\]'
-#      errors=("${errors[@]}" "$output")
-#    fi
-#  done
-# fi
-
-# # if we have errors, exit with 1
-# if [ -n "$errors" ]; then
-#  exit 1
-# fi
+# if we have errors, exit with 1
+if [ -n "$errors" ]; then
+  exit 1
+fi
 
 echo '🍺  No errors found!'

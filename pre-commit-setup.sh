@@ -1,9 +1,15 @@
-# Install whitespace git hook for repository:
+# Install pre-commit git hook for repository:
 # Run from repository root dir
 if [ -f pre-commit.sh ]
 then
-  ln -fs ../../pre-commit.sh .git/hooks/pre-commit
+  # # create new hooks folder
+  # mkdir .git/hooks
+  
+  # move pre-commit.sh to new hooks folder
+  ln -fs pre-commit.sh .git/hooks/pre-commit
+
+  # don't forget to make the pre-commit file executable
   chmod +x .git/hooks/pre-commit
 else
-  echo '\nError: Fix whitespace script not found repository.'
+  echo 'Error: Pre-commit script not found repository.'
 fi
