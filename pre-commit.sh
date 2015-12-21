@@ -33,7 +33,7 @@ echo '2. Minify JS/CSS files'
 # # fetch all changed php files and validate them
 # files=$(git diff-index --name-only --diff-filter=ACMR $against | grep 'asset/css/.*\.css$')
 
-files=$(git diff --name-only HEAD | grep 'test/(javascripts|stylesheets)/.*')
+files=$(git diff --name-only HEAD | egrep 'test/(javascripts|stylesheets)/.*')
 if [ -n "$files" ]; then
 
   for file in $files; do
@@ -65,9 +65,15 @@ if [ -n "$files" ]; then
     echo "YUI Compressor found! Start compressing..."
 
     echo "$file_name_ext => $dest_file"
+    
+    output=`$YUIC $file > $dest_file`
+    # # if our output is not empty, there were errors
+    # if [ -n "$output" ]; then
+    #   echo "$file contains scss syntax errors"
+    #   errors=("${errors[@]}" "$output")
+    # fi
 
-    $YUIC $file > $dest_file
-    git add $dest_file
+    git add "$dest_file"
 
     # remove old *-vXXXXXXXX.min.ext file
     old_file=`find "$dest_dir" -maxdepth 1 | grep "$file_name-v[0-9a-f]\{8\}.min.$file_ext" -m1`
@@ -82,7 +88,7 @@ fi
 
 echo '3. Versioning images'
 
-files=$(git diff --name-only HEAD | grep 'test/images.*')
+files=$(git diff --name-only HEAD | grep 'test/images/.*')
 if [ -n "$files" ]; then
 
   for file in $files; do
