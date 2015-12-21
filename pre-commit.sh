@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # This script checks if all added, copied, modified or renamed files are valid against the PSR2 coding standards
 # and if there are no php, javascript or css errors
@@ -33,7 +33,8 @@ echo '2. Minify JS/CSS files'
 # # fetch all changed php files and validate them
 # files=$(git diff-index --name-only --diff-filter=ACMR $against | grep 'asset/css/.*\.css$')
 
-files=$(git diff --name-only HEAD | egrep '(javascripts|stylesheets)/.*')
+# files=$(git diff --name-only HEAD | egrep '(javascripts|stylesheets)/.*')
+files=$(git diff --name-only HEAD | grep 'stylesheets/.*')
 if [ -n "$files" ]; then
 
   for file in $files; do
@@ -62,18 +63,19 @@ if [ -n "$files" ]; then
 
     # minify
     echo "Searching for YUI Compressor..."
-    YUIC=`which yuicompressor`
+    YUIC="/usr/local/bin/yuicompressor"
 
-    if ! [ $YUIC ]; then
+    if [ -l "$YUIC" ]; then
       echo "Unable to find YUI Compressor! Goodbye!"
-      exit
+      exit 1
     fi
 
     echo "YUI Compressor found! Start compressing..."
 
     echo "$file_name_ext => $dest_file"
     
-    output=`$YUIC $file > $dest_file`
+    $YUIC $file > $dest_file
+    # output=`$YUIC $file > $dest_file`
     # # if our output is not empty, there were errors
     # if [ -n "$output" ]; then
     #   echo "$file contains scss syntax errors"
@@ -84,7 +86,6 @@ if [ -n "$files" ]; then
 
   done
 fi
-
 
 echo '3. Versioning images'
 
