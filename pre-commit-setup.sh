@@ -8,6 +8,8 @@ then
   # move pre-commit.sh to new hooks folder
   cp pre-commit.sh .git/hooks/pre-commit
 
+  # ln -fs pre-commit.sh .git/hooks/pre-commit
+
   # don't forget to make the pre-commit file executable
   chmod +x .git/hooks/pre-commit
 else

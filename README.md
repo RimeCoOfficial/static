@@ -10,7 +10,7 @@ This is a pre commit script that checks added, copied, modified or renamed files
 
 ``` shell
 # Run from repository root dir
-bash pre-commit-setup.sh
+sh pre-commit-setup.sh
 ```
 
 ## Dependencies
