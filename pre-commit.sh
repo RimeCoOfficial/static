@@ -109,6 +109,7 @@ if [ -n "$files" ]; then
 
     echo "$fname => $dest_fname"
     mv "$file" "$dest_fname"
+    git checkout -- $file
     git add "$dest_fname"
 
   done
