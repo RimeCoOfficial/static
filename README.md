@@ -48,5 +48,5 @@ JDK required http://www.java.com/en/download/mac_download.jsp
 6. https://static.rime.co/favicon.ico
 
 # Comparison
-- Gh-pages https://rimeofficial.github.io/favicon.ico
+- Gh-pages https://pages.rime.co/favicon.ico
 - CloudFront https://static.rime.co/favicon.ico
