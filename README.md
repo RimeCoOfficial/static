@@ -1,4 +1,4 @@
-# rimeofficial.github.io `CDN`
+# rimeofficial.github.io `static`
 
 This is a pre commit script that checks added, copied, modified or renamed files for:
 
