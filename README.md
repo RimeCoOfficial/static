@@ -3,7 +3,7 @@
 [![favicon](https://static.rime.co/favicon.png)](https://static.rime.co/favicon.png)
 
 ```
-X-Cache: Hit form cloudftont
+X-Cache: Hit form cloudfront
 ```
 
 # Pre-commit
@@ -48,5 +48,6 @@ JDK required http://www.java.com/en/download/mac_download.jsp
 6. https://static.rime.co/favicon.ico
 
 # Comparison
-- Gh-pages https://pages.rime.co/favicon.ico
-- CloudFront https://static.rime.co/favicon.ico
+- 
+- Gh-pages [1](http://pages.rime.co/favicon.ico), [2](http://pages.rime.co/rimeofficial.GitHub.io/favicon.ico)
+- CloudFront [1](https://static.rime.co/favicon.ico), [2](https://pages.rime.co/images/favicon.ico)
