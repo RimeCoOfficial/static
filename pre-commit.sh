@@ -14,7 +14,6 @@
 # create empty errors array
 declare -a errors
 
-
 echo "1. Adding untracked Files"
 git add "."
 
@@ -83,36 +82,6 @@ if [ -n "$files" ]; then
     # fi
 
     git add "$dest_file"
-
-  done
-fi
-
-echo '3. Versioning images'
-
-files=$(git diff --name-only HEAD | grep 'images/.*')
-if [ -n "$files" ]; then
-
-  for file in $files; do
-
-    file_name_ext=$(basename "$file")
-    dest_dir=$(dirname "$file")
-    file_name="${file_name_ext%.*}"
-    file_ext="${file_name_ext##*.}"    
-
-    random_hash=$(echo $RANDOM $RANDOM $RANDOM $RANDOM $RANDOM | md5 | cut -c -8)
-    
-    dest_file="$dest_dir/$file_name-v$random_hash.$file_ext"
-
-    # remove old *-vXXXXXXXX.ext file
-    # find test/images -maxdepth 1 | grep "checkerbg-v[0-9a-f]\{8\}.gif" -m1
-    old_file=`find "$dest_dir" -maxdepth 1 | grep "$file_name-v[0-9a-f]\{8\}.$file_ext" -m1`
-    if [ ! -z "$old_file" ]; then
-      echo "-- $old_file"
-      git rm "$old_file"
-    fi
-
-    echo "$file_name_ext => $dest_file"
-    git mv "$file" "$dest_file"
 
   done
 fi
