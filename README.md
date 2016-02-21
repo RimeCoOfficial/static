@@ -1,10 +1,10 @@
-# Static
+# Comparison
 
-[![favicon](https://static.rime.co/favicon.png)](https://static.rime.co/favicon.png)
-
-```
-X-Cache: Hit form cloudfront
-```
+vars | Gh-Pages | CloudFront
+--- | --- | ---
+`CNAME` | [with CNAME](http://pages.rime.co/favicon.ico) | [custom domain](https://static.rime.co/images/favicon.ico)
+`HTTPS` | [fake](https://rimeofficial.github.io/rimeofficial.GitHub.io/favicon.ico) [HTTPS](https://rimeofficial.github.io/favicon.ico) | [with real HTTPS](https://static.rime.co/favicon.ico)
+`favicon.png` | ![favicon](https://rimeofficial.github.io/favicon.png) | ![favicon](https://static.rime.co/favicon.png)
 
 # Pre-commit
 
@@ -46,8 +46,3 @@ JDK required http://www.java.com/en/download/mac_download.jsp
 4. https://s3.amazonaws.com/static.rime/index.html
 5. https://d1xk7omnmhphih.cloudfront.net/index.html
 6. https://static.rime.co/favicon.ico
-
-# Comparison
-
-- Gh-pages [with CNAME](http://pages.rime.co/favicon.ico) and [fake](https://rimeofficial.github.io/rimeofficial.GitHub.io/favicon.ico) [HTTPS](https://rimeofficial.github.io/favicon.ico)
-- CloudFront [with real HTTPS](https://static.rime.co/favicon.ico) and [custom domain](https://static.rime.co/images/favicon.ico)
