@@ -48,6 +48,6 @@ JDK required http://www.java.com/en/download/mac_download.jsp
 6. https://static.rime.co/favicon.ico
 
 # Comparison
-- 
-- Gh-pages [1](http://pages.rime.co/favicon.ico), [2](http://pages.rime.co/rimeofficial.GitHub.io/favicon.ico)
-- CloudFront [1](https://static.rime.co/favicon.ico), [2](https://pages.rime.co/images/favicon.ico)
+
+- Gh-pages [with CNAME](http://pages.rime.co/favicon.ico) and [HTTPS](https://rimeofficial.github.io/rimeofficial.GitHub.io/favicon.ico)
+- CloudFront [with HTTPS](https://static.rime.co/favicon.ico) and [subdomain](https://static.rime.co/images/favicon.ico)
