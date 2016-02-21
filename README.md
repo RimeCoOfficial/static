@@ -45,4 +45,8 @@ JDK required http://www.java.com/en/download/mac_download.jsp
 3. http://s3.amazonaws.com/static.rime/index.html
 4. https://s3.amazonaws.com/static.rime/index.html
 5. https://d1xk7omnmhphih.cloudfront.net/index.html
-6. https://static.rime.co/index.html
+6. https://static.rime.co/favicon.ico
+
+# Comparison
+- Gh-pages https://rimeofficial.github.io/favicon.ico
+- CloudFront https://static.rime.co/favicon.ico
