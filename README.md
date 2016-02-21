@@ -1,4 +1,4 @@
-![favicon](https://static.rime.co/favicon.png)
+[![favicon](https://static.rime.co/favicon.png)](https://static.rime.co/favicon.png)
 
 # `static`
 ```
