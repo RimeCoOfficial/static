@@ -42,19 +42,11 @@ if [ -n "$files" ]; then
     dest_dir=$(dirname "$file")
     file_name="${file_name_ext%.*}"
     file_ext="${file_name_ext##*.}" 
-
-    # hex_date=$(date +"%Y%m%d%H%m%S")
-    # hex_date=$(date +"%s")
-    # random_hash=$(printf "%x\n" $hex_date)
-
-    # random_hash=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)
-    # random_hash=$(hexdump -e '/1 "%02x"' -n 4 < /dev/urandom)
-    random_hash=$(echo $RANDOM $RANDOM $RANDOM $RANDOM $RANDOM | md5 | cut -c -8)
     
-    dest_file="$dest_dir/$file_name-v$random_hash.min.$file_ext"
+    dest_file="$dest_dir/$file_name.min.$file_ext"
 
-    # remove old *-vXXXXXXXX.min.ext file
-    old_file=`find "$dest_dir" -maxdepth 1 | grep "$file_name-v[0-9a-f]\{8\}.min.$file_ext" -m1`
+    # remove old *.min.ext file
+    old_file=`find "$dest_dir" -maxdepth 1 | grep "$file_name.min.$file_ext" -m1`
     if [ ! -z "$old_file" ]; then
       echo "-- $old_file"
       git rm "$old_file"
