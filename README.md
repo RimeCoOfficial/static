@@ -29,3 +29,21 @@ JDK required http://www.java.com/en/download/mac_download.jsp
 - [WouterSioen/**pre-commit**](https://github.com/WouterSioen/pre-commit)
 - [larsxschneider/**.git-fix-whitespaces.sh**](https://gist.github.com/larsxschneider/3957621)
 - [phpbb/**phpbb**](https://github.com/phpbb/phpbb/blob/develop-olympus/git-tools/hooks/pre-commit)
+
+
+# S3 Bucket `static.rime`
+## Bucket Policy
+```json
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "Allow Public Access to All Objects",
+			"Effect": "Allow",
+			"Principal": "*",
+			"Action": "s3:GetObject",
+			"Resource": "arn:aws:s3:::static.rime/*"
+		}
+	]
+}
+```
