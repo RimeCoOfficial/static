@@ -1,3 +1,5 @@
+![favicon](https://static.rime.co/favicon.png)
+
 # rimeofficial.github.io `static`
 
 This is a pre commit script that checks added, copied, modified or renamed files for:
