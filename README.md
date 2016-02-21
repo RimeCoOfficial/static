@@ -3,7 +3,7 @@
 This is a pre commit script that checks added, copied, modified or renamed files for:
 
 - Minify js/css
-- Dynamic revision (add hash to file name) to escape browser cache
+- ~~Dynamic revision (add hash to file name) to escape browser cache~~
 - ~~syntax errors and PSR2 coding standards.~~
 
 ## Installation
