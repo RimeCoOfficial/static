@@ -1,6 +1,11 @@
-![favicon](https://static.rime.co/favicon.png)
+# `static`
 
-# rimeofficial.github.io `static`
+[![favicon](https://static.rime.co/favicon.png)](https://static.rime.co)
+```
+X-Cache: Hit form cloudftont
+```
+
+# Pre-commit
 
 This is a pre commit script that checks added, copied, modified or renamed files for:
 
