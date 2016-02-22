@@ -2,8 +2,8 @@
 
 vars | Gh-Pages | CloudFront
 --- | --- | ---
-`CNAME` | [with CNAME](http://pages.rime.co/favicon.ico) | [custom domain](https://static.rime.co/images/favicon.ico)
-`HTTPS` | [fake](https://rimeofficial.github.io/rimeofficial.GitHub.io/favicon.ico) [HTTPS](https://rimeofficial.github.io/favicon.ico) | [with real HTTPS](https://static.rime.co/favicon.ico)
+`CNAME` | [with CNAME](http://pages.rime.co/favicon.png) | [custom CDN](https://static.rime.co/images/favicon.png)
+`HTTPS` | [redirect](https://rimeofficial.github.io/rimeofficial.GitHub.io/favicon.png) [ HTTPS](https://rimeofficial.github.io/favicon.png) | [free HTTPS](https://static.rime.co/favicon.png)
 `favicon.png` | ![favicon](https://rimeofficial.github.io/favicon.png) | ![favicon](https://static.rime.co/favicon.png)
 
 # Pre-commit
