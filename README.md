@@ -42,7 +42,7 @@ JDK required http://www.java.com/en/download/mac_download.jsp
 
 1. http://rimeofficial.github.io/static/
 2. http://pages.rime.co/static/
-3. http://s3.amazonaws.com/static.rime/index.html
-4. https://s3.amazonaws.com/static.rime/index.html
-5. https://d1xk7omnmhphih.cloudfront.net/index.html
-6. https://static.rime.co/favicon.ico
+3. http://s3.amazonaws.com/static.rime/favicon.png
+4. https://s3.amazonaws.com/static.rime/favicon.png
+5. https://d3j2phhb7izzuc.cloudfront.net/favicon.png
+6. https://static.rime.co/favicon.png
