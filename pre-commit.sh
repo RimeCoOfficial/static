@@ -33,7 +33,8 @@ echo '2. Minify JS/CSS files'
 # files=$(git diff-index --name-only --diff-filter=ACMR $against | grep 'asset/css/.*\.css$')
 
 # files=$(git diff --name-only HEAD | egrep '(javascripts|stylesheets)/.*')
-files=$(git diff --name-only HEAD | grep 'javascripts/.*')
+
+files=$(git diff-index --name-only --diff-filter=ACMR $against | grep '/javascripts/.*\.js$')
 if [ -n "$files" ]; then
 
   for file in $files; do
@@ -78,7 +79,7 @@ if [ -n "$files" ]; then
   done
 fi
 
-files=$(git diff --name-only HEAD | grep 'stylesheets/.*')
+files=$(git diff-index --name-only --diff-filter=ACMR $against | grep '/stylesheets/.*\.css$')
 if [ -n "$files" ]; then
 
   for file in $files; do
