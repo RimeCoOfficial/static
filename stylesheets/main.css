@@ -65,6 +65,8 @@ video { width: 100% !important; height: auto !important; }
 @media (max-width: 767px)  { .container { max-width: 500px; } }
 @media (min-width: 768px)  { .container { width:     750px; } }
 
+section.main .container-slim { max-width: 500px; }
+
 .modal-dialog { max-width: 500px; }
 @media (min-width: 499px) { .modal-dialog { margin: 30px auto; } }
 
