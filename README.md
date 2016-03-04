@@ -2,7 +2,7 @@
 
 vars | Gh-Pages | CloudFront
 --- | --- | ---
-`CNAME` | [with CNAME](http://pages.rime.co/favicon.png) | [custom CDN](https://static.rime.co/images/favicon.png)
+`CNAME` | [with CNAME](http://www.rime.co/favicon.png) | [custom CDN](https://static.rime.co/images/favicon.png)
 `HTTPS` | [redirect](https://rimeofficial.github.io/rimeofficial.GitHub.io/favicon.png) [ HTTPS](https://rimeofficial.github.io/favicon.png) | [free HTTPS](https://static.rime.co/favicon.png)
 `favicon.png` | ![favicon](https://rimeofficial.github.io/favicon.png) | ![favicon](https://static.rime.co/favicon.png)
 
@@ -40,8 +40,8 @@ JDK required http://www.java.com/en/download/mac_download.jsp
 
 # Endpoints
 
-1. http://rimeofficial.github.io/static/
-2. http://pages.rime.co/static/
+1. http://rimeofficial.github.io/favicon.png
+2. http://www.rime.co/favicon.png
 3. http://s3.amazonaws.com/static.rime/favicon.png
 4. https://s3.amazonaws.com/static.rime/favicon.png
 5. https://d3j2phhb7izzuc.cloudfront.net/favicon.png
