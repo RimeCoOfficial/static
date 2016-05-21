@@ -4,9 +4,9 @@
 
 ## Custom URL
 ```
-customizerUrl:            http://getbootstrap.com/customize/?id=9f85e1dd0d38428161da6a4582d613d8
+customizerUrl:            http://getbootstrap.com/customize/?id=15004a4fa44fa84052aa4a9fe72c63ab
 ```
-saved to https://gist.github.com/9f85e1dd0d38428161da6a4582d613d8
+saved to https://gist.github.com/15004a4fa44fa84052aa4a9fe72c63ab
 
 ## Colors
 ```
@@ -72,4 +72,13 @@ saved to https://gist.github.com/9f85e1dd0d38428161da6a4582d613d8
 ```
 @state-info-text:         @gray-dark
 @state-info-bg:           @gray-lighter
+```
+
+## Code
+```
+@code-color:              @gray-dark
+@code-bg:                 @gray-lighter
+@kbd-bg:                  @gray-dark
+@pre-bg:                  @gray-lighter
+@pre-color:               @gray-dark
 ```
