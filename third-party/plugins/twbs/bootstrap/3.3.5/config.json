@@ -16,7 +16,7 @@
     "@link-color": "@brand-primary",
     "@link-hover-color": "@gray-light",
     "@link-hover-decoration": "none",
-    "@font-family-sans-serif": "\"Open Sans\", \"Helvetica Neue\", \"Segoe UI\", Helvetica, Arial, sans-serif",
+    "@font-family-sans-serif": "'Open Sans', sans-serif",
     "@font-family-serif": "Georgia, \"Times New Roman\", Times, serif",
     "@font-family-monospace": "Menlo, Monaco, Consolas, \"Courier New\", monospace",
     "@font-family-base": "@font-family-sans-serif",
@@ -361,11 +361,11 @@
     "@close-font-weight": "bold",
     "@close-color": "#000",
     "@close-text-shadow": "0 1px 0 #fff",
-    "@code-color": "#c7254e",
-    "@code-bg": "#f9f2f4",
+    "@code-color": "@gray-dark",
+    "@code-bg": "@gray-lighter",
     "@kbd-color": "#fff",
-    "@kbd-bg": "#333",
-    "@pre-bg": "#f5f5f5",
+    "@kbd-bg": "@gray-dark",
+    "@pre-bg": "@gray-lighter",
     "@pre-color": "@gray-dark",
     "@pre-border-color": "#ccc",
     "@pre-scrollable-max-height": "340px",
@@ -378,6 +378,7 @@
     "@blockquote-border-color": "@gray-lighter",
     "@page-header-border-color": "@gray-lighter",
     "@dl-horizontal-offset": "@component-offset-horizontal",
+    "@dl-horizontal-breakpoint": "@grid-float-breakpoint",
     "@hr-border": "@gray-lighter"
   },
   "css": [
@@ -430,5 +431,5 @@
     "scrollspy.js",
     "transition.js"
   ],
-  "customizerUrl": "http://getbootstrap.com/customize/?id=9714c1ab2f084d8375ff"
+  "customizerUrl": "http://getbootstrap.com/customize/?id=15004a4fa44fa84052aa4a9fe72c63ab"
 }

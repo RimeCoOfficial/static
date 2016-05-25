@@ -139,7 +139,11 @@ input:focus, textarea:focus, select:focus, input:active { border: 0 !important; 
 
 /*.btn:hover, .btn:active, .btn:focus { background-color: #777777; }*/
 
-.nav>li>a { background-color: #f9f9f9; color: #555555; }
+.nav>li>a { color: #555555; }
+.nav-pills>li>a { background-color: #f9f9f9; }
+.nav-stacked>li>a { background-color: transparent; }
+/*.nav-tabs>li>a { color: #555555; }*/
+
 
 /*.nav-tabs.nav-stacked>li+li { margin-top: 0; }*/
 @media (min-width: 768px) { 

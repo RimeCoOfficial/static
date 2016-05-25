@@ -4,9 +4,9 @@
 
 ## Custom URL
 ```
-customizerUrl:            http://getbootstrap.com/customize/?id=34941f0b5c63abb2cfad
+customizerUrl:            http://getbootstrap.com/customize/?id=15004a4fa44fa84052aa4a9fe72c63ab
 ```
-saved to https://gist.github.com/34941f0b5c63abb2cfad
+saved to https://gist.github.com/15004a4fa44fa84052aa4a9fe72c63ab
 
 ## Colors
 ```
@@ -32,7 +32,7 @@ saved to https://gist.github.com/34941f0b5c63abb2cfad
 
 ## Typography
 ```
-@font-family-sans-serif:  "Open Sans", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif
+@font-family-sans-serif:  'Open Sans', sans-serif
 
 @font-size-base:          14px
 @font-size-large:         ceil((@font-size-base * 1.25))  // ~18px
@@ -72,4 +72,13 @@ saved to https://gist.github.com/34941f0b5c63abb2cfad
 ```
 @state-info-text:         @gray-dark
 @state-info-bg:           @gray-lighter
+```
+
+## Code
+```
+@code-color:              @gray-dark
+@code-bg:                 @gray-lighter
+@kbd-bg:                  @gray-dark
+@pre-bg:                  @gray-lighter
+@pre-color:               @gray-dark
 ```
