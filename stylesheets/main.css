@@ -72,7 +72,7 @@ section.main .container-slim { max-width: 500px; }
 
 /*.modal-header { background-color: #333; color: #fff; }*/
 /*.modal-header .close { opacity: .8; text-shadow: none; color: #fff; }*/
-.modal-backdrop.in { opacity: .9; background: #333 url(../img/overlays.png); }
+.modal-backdrop.in { opacity: .9; background: #333 url(../images/overlays.png); }
 
 * { 
   outline: none !important; 
