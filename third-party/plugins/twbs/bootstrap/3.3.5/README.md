@@ -4,9 +4,8 @@
 
 ## Custom URL
 ```
-customizerUrl:            http://getbootstrap.com/customize/?id=15004a4fa44fa84052aa4a9fe72c63ab
+Success! Your configuration has been saved to https://gist.github.com/2b59f082b9cd97f5b634b54fb561ed1e and can be revisited here at http://getbootstrap.com/customize/?id=2b59f082b9cd97f5b634b54fb561ed1e for further customization.
 ```
-saved to https://gist.github.com/15004a4fa44fa84052aa4a9fe72c63ab
 
 ## Colors
 ```
@@ -32,20 +31,24 @@ saved to https://gist.github.com/15004a4fa44fa84052aa4a9fe72c63ab
 
 ## Typography
 ```
-@font-family-sans-serif:  'Open Sans', sans-serif
+@font-family-sans-serif:  apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif
+
+'Open Sans', sans-serif
+'Lato', sans-serif
+"Myriad Set Pro","Helvetica Neue","Helvetica","Arial",sans-serif
 
 @font-size-base:          14px
 @font-size-large:         ceil((@font-size-base * 1.25))  // ~18px
 @font-size-small:         ceil((@font-size-base * 0.85))  // ~12px
 
-@font-size-h1:            floor((@font-size-base * 1.8))  // ~25px
-@font-size-h2:            floor((@font-size-base * 1.6))  // ~22px
-@font-size-h3:            ceil((@font-size-base * 1.4))   // ~20px
+@font-size-h1:            floor((@font-size-base * 2.6))  // ~25px
+@font-size-h2:            floor((@font-size-base * 2.15))  // ~22px
+@font-size-h3:            ceil((@font-size-base * 1.7))   // ~20px
 @font-size-h4:            ceil((@font-size-base * 1.25))  // ~18px
 @font-size-h5:            @font-size-base
 @font-size-h6:            ceil((@font-size-base * 0.85))  // ~12px
 
-@headings-font-weight:    700
+@headings-font-weight:    500
 ```
 
 ## Components
