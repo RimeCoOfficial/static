@@ -9,7 +9,7 @@
 #   SCSS lint (https://github.com/causes/scss-lint)
 #
 # @version  1.0.0
-# @author Shubhajit Saha <www@suvozit.com>
+# @author Shubhajit Saha <suvozit@rime.co>
 
 # create empty errors array
 declare -a errors
