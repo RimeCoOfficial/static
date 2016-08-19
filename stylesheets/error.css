@@ -5,9 +5,9 @@
 html, body { height: 100%; }
 
 body {
-  letter-spacing: 0.02em;
-  word-wrap: break-word;
-  text-rendering: optimizeLegibility;
+    letter-spacing: 0.02em;
+    word-wrap: break-word;
+    text-rendering: optimizeLegibility;
 }
 
 .logo { margin-top: 10px; margin-bottom: 15px; }

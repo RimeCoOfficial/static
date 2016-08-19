@@ -2,19 +2,19 @@
 # Run from repository root dir
 if [ -f pre-commit.sh ]
 then
-  # # create new hooks folder
-  # mkdir .git/hooks
-  
-  # move pre-commit.sh to new hooks folder
-  cp pre-commit.sh .git/hooks/pre-commit
+    # # create new hooks folder
+    # mkdir .git/hooks
+    
+    # move pre-commit.sh to new hooks folder
+    cp pre-commit.sh .git/hooks/pre-commit
 
-  # ln -fs pre-commit.sh .git/hooks/pre-commit
+    # ln -fs pre-commit.sh .git/hooks/pre-commit
 
-  # don't forget to make the pre-commit file executable
-  chmod +x .git/hooks/pre-commit
+    # don't forget to make the pre-commit file executable
+    chmod +x .git/hooks/pre-commit
 
-  # ln -fs pre-commit.sh .git/hooks/pre-commit
-  # chmod +x pre-commit.sh
+    # ln -fs pre-commit.sh .git/hooks/pre-commit
+    # chmod +x pre-commit.sh
 else
-  echo 'Error: Pre-commit script not found repository.'
+    echo 'Error: Pre-commit script not found repository.'
 fi
