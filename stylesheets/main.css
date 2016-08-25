@@ -323,3 +323,13 @@ header .navbar-default .navbar-toggle .icon-bar {
     bottom: 25px;
     right: 20px;
 }
+
+.img-margin-bottom-20 { padding-bottom: 20px; }
+
+.landing-jumbotron {
+    background: url(../images/home/9-squares-dotdotdot-dstanfield-final-dribbb.gif);
+    /*background: #333 url(../images/home/9-squares-dotdotdot-dstanfield-final-dribbb.gif) no-repeat center center fixed;
+    background-size: cover;*/
+    color: white;
+    height: 600px;
+}
