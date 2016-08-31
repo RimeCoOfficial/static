@@ -195,11 +195,6 @@ section.main>.container { padding-bottom: 30px; }
 
 .navbar-collapse { max-height: none !important; }
 
-.navbar-inverse { background-color: #231e1f; }
-.navbar-inverse.affix-top { background-color: transparent; }
-.navbar-inverse.affix { background-color: #231e1f; }
-@media (max-width: 768px) { .navbar-inverse.affix-top { background-color: #231e1f; } }
-
 .navbar-default, .dropdown-menu { background-color: transparent; }
 .navbar-default.affix-top { background-color: transparent; }
 .navbar-default.affix { background-color: white; } 
@@ -209,7 +204,6 @@ section.main>.container { padding-bottom: 30px; }
 .navbar { border-color: transparent; }
 .navbar.affix-top { border-color: transparent; }
 .navbar-default.affix { border-color: #eeeeee; }
-.navbar-inverse.affix { border-color: transparent; }
 
 .dropdown-menu {
     background-color: #eeeeee;
@@ -220,17 +214,16 @@ section.main>.container { padding-bottom: 30px; }
     background-color: #ddd;
 }
 .navbar-brand {
-    padding: 5px 15px;
+    padding: 7px 15px;
 }
 .navbar-brand>img {
     display: inline; 
 }
 
-.navbar-default .navbar-toggle, .navbar-inverse .navbar-toggle {
+.navbar-default .navbar-toggle {
     border: 0;
 }
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus,
-.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
     background-color: transparent;
 }
 
@@ -242,9 +235,16 @@ section.main>.container { padding-bottom: 30px; }
 .navbar-form .form-group, .navbar-form .form-control { width: 100% !important; }
 .navbar-form { border: none; }
 
+@media (min-width: 768px) {
+    .navbar-nav>li>a {
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+}
+
 .head-padding { padding-top: 70px; }
 
-.header-bg {
+.home-banner {
   background: #f0f1eb url('../images/home/tumblr_oan67aYRRE1qinh1vo1_1280.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -257,20 +257,27 @@ section.main>.container { padding-bottom: 30px; }
   
   height:100%;
 }
-.header-bg .container {
-    padding-top: 90px;
-    padding-bottom: 50px;
+
+.home-banner {
+    padding-top: 150px;
+    padding-bottom: 160px;
+}
+.home-banner h1 {
+    font-size: 60px;
 }
 
+.home-banner-2 h2 {
+    padding-top: 15px;
+}
 
 @media (min-width: 768px) {
-    .header-bg h1 {
+    /*.home-banner h1 {
         font-size: 60px;
-    }
-    .header-bg {
+    }*/
+    /*.home-banner {
         padding-top: 150px;
         padding-bottom: 100px;
-    }
+    }*/
 }
 
 .notif-count { left: 30px; position: absolute; top: 13px; z-index: 999; }
@@ -350,4 +357,30 @@ section.main>.container { padding-bottom: 30px; }
     background: transparent;
     /*color: white;*/
     /*height: 600px;*/
+}
+
+.landing .lead-2 {
+    font-size: 18px;
+    font-weight: 200;
+}
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }
