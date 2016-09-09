@@ -57,9 +57,6 @@ body>footer {
     padding-top: 20px;
 }
 
-h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child,
-.h1:first-child, .h2:first-child, .h3:first-child, .h4:first-child, .h5:first-child, .h6:first-child { margin-top: 0; }
-
 video { width: 100% !important; height: auto !important; }
 
 
@@ -195,54 +192,19 @@ section.main>.container { padding-bottom: 30px; }
 
 .navbar-collapse { max-height: none !important; }
 
-.navbar-default, .dropdown-menu { background-color: transparent; }
-.navbar-default.affix-top { background-color: transparent; }
-.navbar-default.affix { background-color: white; } 
-@media (max-width: 768px) { .navbar-default.affix-top { background-color: white; } }
+.navbar-default { background-color: white; border-width: 0; }
+.navbar-default .navbar-toggle { border: 0; }
 
-.navbar { /*border-width: 0px;*/ padding-top: 10px; }
-.navbar { border-color: transparent; }
-.navbar.affix-top { border-color: transparent; }
-.navbar-default.affix { border-color: #eeeeee; }
+.navbar-brand { padding: 7px 15px; }
 
-.dropdown-menu {
-    background-color: #eeeeee;
-}
-.dropdown-menu>li>a { color: #555555; }
-.dropdown-menu>li>a:hover {
-    color: #555555;
-    background-color: #ddd;
-}
-.navbar-brand {
-    padding: 7px 15px;
-}
-.navbar-brand>img {
-    display: inline; 
-}
+.bg-F0F1EB { background-color: #F0F1EB; }
 
-.navbar-default .navbar-toggle {
-    border: 0;
-}
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-    background-color: transparent;
-}
-
-.dropdown-menu .divider {
-    background-color: #777777;
-}
 
 @media (min-width: 768px) { .navbar-form { width: 420px; } }
 .navbar-form .form-group, .navbar-form .form-control { width: 100% !important; }
 .navbar-form { border: none; }
 
-@media (min-width: 768px) {
-    .navbar-nav>li>a {
-        padding-top: 20px;
-        padding-bottom: 10px;
-    }
-}
-
-.head-padding { padding-top: 70px; }
+.head-padding { padding-top: 50px; }
 
 .home-banner {
   background: #f0f1eb url('../images/home/tumblr_oan67aYRRE1qinh1vo1_1280.jpg');
@@ -291,6 +253,8 @@ section.main>.container { padding-bottom: 30px; }
 /*.infinite-container .infinite-item:first-child .media:first-child { margin-top: 0; }
 .media-body .media:first-child { margin-top: 0; }
 .media:first-child { margin-top: 15px; }*/
+
+.infinite-container>.infinite-item>.media { margin-top: 15px; }
 
 
 .post-item-unseen { border-bottom: 1px solid #DA2E75; }
