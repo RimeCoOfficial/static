@@ -194,6 +194,9 @@ section.main>.container { padding-bottom: 30px; }
 
 .navbar-default { background-color: white; border-width: 0; }
 .navbar-default .navbar-toggle { border: 0; }
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: transparent;
+}
 
 .navbar-brand { padding: 7px 15px; }
 
@@ -203,6 +206,7 @@ section.main>.container { padding-bottom: 30px; }
 @media (min-width: 768px) { .navbar-form { width: 420px; } }
 .navbar-form .form-group, .navbar-form .form-control { width: 100% !important; }
 .navbar-form { border: none; }
+
 
 .head-padding { padding-top: 50px; }
 

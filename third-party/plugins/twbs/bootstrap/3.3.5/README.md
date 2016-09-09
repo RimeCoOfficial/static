@@ -47,8 +47,6 @@ Success! Your configuration has been saved to https://gist.github.com/2b59f082b9
 @font-size-h4:            ceil((@font-size-base * 1.25))  // ~18px
 @font-size-h5:            @font-size-base
 @font-size-h6:            ceil((@font-size-base * 0.85))  // ~12px
-
-@headings-font-weight:    500
 ```
 
 ## Components
