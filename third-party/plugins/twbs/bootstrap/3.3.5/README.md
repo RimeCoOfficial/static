@@ -49,6 +49,13 @@ Success! Your configuration has been saved to https://gist.github.com/2b59f082b9
 @font-size-h6:            ceil((@font-size-base * 0.85))  // ~12px
 ```
 
+## Iconography
+```
+@icon-font-path:
+@icon-font-name:
+@icon-font-svg-id:
+```
+
 ## Components
 ```
 @border-radius-base:      0
