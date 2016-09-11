@@ -1,6 +1,4 @@
-/* Make something awesome! */
-
-/* color scheme - white: #FFF, pink: #D90472, gray: #919191, dark gray: #35424A, */
+/* Make awesome error page! */
 
 html, body { height: 100%; }
 
@@ -10,7 +8,4 @@ body {
     text-rendering: optimizeLegibility;
 }
 
-.logo { margin-top: 10px; margin-bottom: 15px; }
-.error-img { margin-top: 10px; margin-bottom: 15px; }
-
-section.main .container { padding-top: 30px; padding-bottom: 50px; max-width: 500px; }
+section.main .container { padding-top: 30px; padding-bottom: 50px; max-width: 750px; }
