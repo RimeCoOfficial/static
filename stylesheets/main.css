@@ -211,7 +211,10 @@ section.main>.container { padding-bottom: 30px; }
     background-color: transparent;
 }
 
+.navbar-form { border: 0; }
+
 .bg-F0F1EB { background-color: #F0F1EB; }
+.bg-F0F1EB .form-control, .bg-F0F1EB .input-group-addon{ background-color: white; }
  
 
 .head-padding { padding-top: 50px; }
