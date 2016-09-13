@@ -215,6 +215,8 @@ section.main>.container { padding-bottom: 30px; }
 .navbar-brand { padding: 10px 15px; }
 .navbar-toggle { padding: 10px 10px; }
 
+.navbar-nav .icon-lg { line-height: 0; }
+
 .bg-F0F1EB { background-color: #F0F1EB; }
 .bg-F0F1EB .form-control, .bg-F0F1EB .input-group-addon{ background-color: white; }
  
