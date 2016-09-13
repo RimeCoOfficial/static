@@ -223,18 +223,42 @@ section.main>.container { padding-bottom: 30px; }
 
 .head-padding { padding-top: 50px; }
 
+
 .home-banner {
-  background: #f0f1eb url('../images/home/tumblr_oan67aYRRE1qinh1vo1_1280.jpg');
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: bottom right;
-  
-  height:100%;
+    background: #f0f1eb url('../images/home/tumblr_oan67aYRRE1qinh1vo1_1280-xs.jpg');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: bottom right;
+}
+@media (min-width: 768px){
+    .home-banner {
+        background: #f0f1eb url('../images/home/tumblr_oan67aYRRE1qinh1vo1_1280-sm.jpg');
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: bottom right;
+    }
+}
+@media (min-width: 992px) {
+    .home-banner {
+        background: #f0f1eb url('../images/home/tumblr_oan67aYRRE1qinh1vo1_1280.jpg');
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: bottom right;
+
+        height:100%;
+    }
 }
 .home-banner {
     padding-top: 200px;
-    padding-bottom: 200px;
+    padding-bottom: 230px;
 }
+@media (max-width: 768px) {
+    .home-banner {
+        padding-top: 100px;
+        padding-bottom: 550px;
+    }
+}
+
 
 .infinite-container>.infinite-item>.media { margin-top: 15px; }
 
