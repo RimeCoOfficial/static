@@ -252,7 +252,7 @@ section.main>.container { padding-bottom: 30px; }
     padding-top: 200px;
     padding-bottom: 230px;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .home-banner {
         padding-top: 100px;
         padding-bottom: 550px;
