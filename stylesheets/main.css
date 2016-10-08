@@ -22,12 +22,16 @@ body {
     /* Margin bottom by footer height */
     margin-bottom: 80px;
 }
+
 body>footer {
     position: absolute;
     bottom: 0;
     width: 100%;
     /* Set the fixed height of the footer here */
-    height: 80px;
+    height: 110px;
+
+    color: #777777;
+    padding-top: 50px;
 }
 
 body {
@@ -63,13 +67,6 @@ pre {
 /*
 -------------------------------------------------- */
 
-body>footer {
-    /*font-size: 12px;*/
-    color: #777777;
-    /*margin-top: 50px;*/
-    padding-top: 20px;
-}
-
 video { width: 100% !important; height: auto !important; }
 
 
@@ -81,7 +78,7 @@ video { width: 100% !important; height: auto !important; }
 
 @media (min-width: 1200px) { .container { width: 1020px; } }
 
-section.main .container-slim { max-width: 500px; }
+/*section.main .container-slim { max-width: 500px; }*/
 
 .modal-dialog { max-width: 500px; }
 @media (min-width: 499px) { .modal-dialog { margin: 30px auto; } }
@@ -176,6 +173,17 @@ input:focus, textarea:focus, select:focus, input:active { border: 0 !important; 
     border-bottom: 1px solid #bbb;
 }
 
+@media (min-width: 768px) { .navbar-form { margin-right: -30px; } }
+
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid transparent;
+}
+
 /*.nav-tabs.nav-stacked>li+li { margin-top: 0; }*/
 @media (min-width: 768px) { 
     .nav-justified>li { padding-right: 1px; padding-left: 1px; } 
@@ -214,7 +222,7 @@ input:focus, textarea:focus, select:focus, input:active { border: 0 !important; 
     overflow: hidden;*/
 }
 
-section.main>.container { padding-bottom: 30px; }
+.header-padding { padding-top: 50px; }
 
 .navbar-collapse { max-height: none !important; }
 
@@ -232,9 +240,6 @@ section.main>.container { padding-bottom: 30px; }
 
 .bg-F0F1EB { background-color: #F0F1EB; }
 .bg-F0F1EB .form-control, .bg-F0F1EB .input-group-addon{ background-color: white; }
- 
-
-.head-padding { padding-top: 50px; }
 
 
 .home-banner {
@@ -264,7 +269,7 @@ section.main>.container { padding-bottom: 30px; }
     .home-banner h1 { font-size: 45px; }
 }
 .home-banner {
-    padding-top: 200px;
+    padding-top: 150px;
     padding-bottom: 150px;
 }
 @media (max-width: 767px) {
