@@ -1,135 +1,66 @@
-/* Make something awesome! */
+/* 
+Make something awesome!
+---
 
-/* -- color scheme 
-@brand-primary:           #DA2E75
-
-@gray-darker:             lighten(@gray-base, 13.5%)  // #222222
-@gray-dark:               lighten(@gray-base, 20%)    // #333333
-@gray:                    lighten(@gray-base, 33.5%)  // #555555
-@gray-light:              lighten(@gray-base, 46.7%)  // #777777
-@gray-lighter:            lighten(@gray-base, 93.5%)  // #eeeeee
-// f9f9f9
+color scheme primary: #DA2E75
 */
 
-/* Sticky footer styles
-http://getbootstrap.com/examples/sticky-footer/sticky-footer.css
--------------------------------------------------- */
-html {
-    position: relative;
-    min-height: 100%;
-}
-body {
-    /* Margin bottom by footer height */
-    margin-bottom: 80px;
+html>body {
+    font-family: 'Roboto','Helvetica','Arial',sans-serif!important;
+    background-color: #FAFAFA;
 }
 
-body>footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    /* Set the fixed height of the footer here */
-    height: 110px;
-
-    color: #777777;
-    padding-top: 50px;
-}
-
-body {
-    /*letter-spacing: 0.01em;*/
-    white-space: normal;
-    word-wrap: break-word;
-    /*word-break: break-all;*/
-    /*text-rendering: optimizeLegibility;*/
-}
-
-.white-space {
-    white-space: pre;           /* CSS 2.0 */
-    white-space: pre-wrap;      /* CSS 2.1 */
-    white-space: pre-line;      /* CSS 3.0 */
-    white-space: -pre-wrap;     /* Opera 4-6 */
-    white-space: -o-pre-wrap;   /* Opera 7 */
-    white-space: -moz-pre-wrap; /* Mozilla */
-    white-space: -hp-pre-wrap;  /* HP Printers */
+.mdl-textfield__input {
+    font-family: 'Roboto','Helvetica','Arial',sans-serif!important;
 }
 
 /*
-https://css-tricks.com/snippets/css/make-pre-text-wrap/
-Browser specific (not valid) styles to make preformatted text wrap         
+Rules for sizing the icon.
+http://google.github.io/material-design-icons/
 */
-pre {
- white-space: pre-wrap;       /* css-3 */
- white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
- white-space: -pre-wrap;      /* Opera 4-6 */
- white-space: -o-pre-wrap;    /* Opera 7 */
- word-wrap: break-word;       /* Internet Explorer 5.5+ */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+/* Uses a transparent header that draws on top of the layout's background */
+.demo-layout-transparent {
+    background:
+        url('../images/tiles/sayagata-400px.png');
+    /*background-color: #F0F1EB;*/
 }
 
-/*
--------------------------------------------------- */
-
-video { width: 100% !important; height: auto !important; }
-
-
-/*@media (max-width: 767px)  { .container { max-width: 500px; } }*/
-/*@media (min-width: 768px)  { .container { width:     768px; } }*/
-
-/*@media (max-width: 767px)  { .container { max-width: 650px; } }
-@media (min-width: 1200px) { .container { width: 1020px; } }*/
-
-@media (min-width: 1200px) { .container { width: 1020px; } }
-
-/*section.main .container-slim { max-width: 500px; }*/
-
-.modal-dialog { max-width: 500px; }
-@media (min-width: 499px) { .modal-dialog { margin: 30px auto; } }
-
-.modal-lg { max-width: 750px; }
-
-/*.modal-header { background-color: #333; color: #fff; }*/
-/*.modal-header .close { opacity: .8; text-shadow: none; color: #fff; }*/
-.modal-backdrop.in { opacity: .9; background: #333 url(../images/overlays.png); }
-.modal-header { border: 0; }
-.modal-footer { border: 0; }
-
-* { 
-    outline: none !important; 
-    /*border: 0 !important;*/
-    -webkit-box-shadow: none !important; -moz-box-shadow: none !important; box-shadow: none !important;
+.demo-layout-transparent-home {
+    background:
+        url('../images/home/Untitled.jpg');
+    background-size: cover;
+    background-position: 25% 50%;
 }
 
-img.emoji {
-    height: 1em;
-    width: 1em;
-    margin: 0 .05em 0 .1em;
-    vertical-align: -0.1em;
+.demo-card-square.mdl-card {
+    /*width: 320px;*/
+    height: 320px;
+}
+.demo-card-square>.mdl-card__title {
+    color: #fff;
+    background:
+        /*url('../images/cherry-blossom-featured-image.jpg') center / cover;*/
+        /*url('../images/home/tumblr_oan67aYRRE1qinh1vo1_1280.jpg') center / cover;*/
+        url('../images/home/Untitled.jpg') center / cover;
+        /*url('https://i.ytimg.com/vi/HyssSSkwo8k/maxresdefault.jpg') center / cover;*/
 }
 
-/* No Border */
-input, textarea, pre,
-.alert, .well, .btn, .input-group-addon, .dropdown-menu, .list-group-item, .modal-content, .panel, .panel-body { border: 0 !important; }
+.flex-flow-row-wrap { flex-flow: row wrap; }
 
-.btn { padding: 7px 12px; }
-
-input, textarea, select, .input-group-addon,
-input:focus, textarea:focus, select:focus, input:active { border: 0 !important; }
-
-.link-dark { color: #333333; } .link-dark:hover { color: #DA2E75; }
-.link-light { color: #777777; } .link-light:hover { color: #DA2E75; }
-.link-light-inverse { color: #777777; } .link-light-inverse:hover { color: #333333; }
-.link-transparent:hover { opacity: 0.8 }
-.link-like { color: #DA2E75; } .link-like:hover { color: #DA2E75; }
-
-.text-white { color: #FFF; }
-
-.full-width { width: 100% !important; }
-.full-height { height: 100% !important; }
-.full-size { width: 100% !important; height: 100% !important; }
-.full-height-min { min-height: 100% !important; }
-
-.steps .progress { height: 2px; }
-.steps .progress-bar { line-height: 2px; }
-
-.word-break { word-break: break-word; }
+.max-width { width: 100% !important; }
 
 .bg-cover {
     background-color: #f9f9f9;
@@ -141,212 +72,27 @@ input:focus, textarea:focus, select:focus, input:active { border: 0 !important; 
 }
 .bg-cover-transparent { background-color: transparent; }
 
-.bg-photo-holder {
-    /*width: 100%; height: 100%;*/
-    /*background: #111 url(../img/noise-black.png) 50% 50%; background-image: url(../img/profile-header-gradient.png),url(../img/noise-black.png);*/
-    /*background: #eee url(../img/checkerbg.gif) top left;*/
-    background-color: #f9f9f9;
-    /*text-align: center;*/
+/*
+Twitter Emoji
+*/
+img.emoji {
+    height: 1em;
+    width: 1em;
+    margin: 0 .05em 0 .1em;
+    vertical-align: -0.1em;
 }
 
-.img-center { margin: 0 auto; }
-
-.text-first-letter-capitalize { display: block; }
-.text-first-letter-capitalize:first-letter { text-transform: uppercase; }
-
-/*.btn:hover, .btn:active, .btn:focus { background-color: #777777; }*/
-
-.nav>li>a { color: #555555; }
-.nav-pills>li>a { background-color: #f9f9f9; }
-.nav-stacked>li>a { background-color: transparent; }
-/*.nav-tabs>li>a { color: #555555; }*/
-
-.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
-    border-color: transparent;
-    border-bottom: 1px solid #666;
+/*
+Bootstrap elements
+*/
+.pull-left {
+    float: left !important;
+}
+.pull-right {
+    float: right !important;
 }
 
-.nav-tabs>li>a:hover, .nav-tabs>li>a:focus {
-    text-decoration: none;
-    background-color: #fff;
-    border-color: transparent;
-    border-bottom: 1px solid #bbb;
-}
-
-@media (min-width: 768px) { .navbar-form { margin-right: -30px; } }
-
-.navbar {
-    position: relative;
-    min-height: 50px;
-    margin-bottom: 0px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border: 1px solid transparent;
-}
-
-/*.nav-tabs.nav-stacked>li+li { margin-top: 0; }*/
-@media (min-width: 768px) { 
-    .nav-justified>li { padding-right: 1px; padding-left: 1px; } 
-    .nav-justified>li:first-child { padding-left: 0px; }
-    .nav-justified>li:last-child { padding-right: 0px; }
-}
-.nav-justified-xs>li { display: table-cell; width: 1%; }
-@media (max-width: 767px) {
-    .nav-justified-xs>li { padding-right: 1px; padding-left: 1px; } 
-    .nav-justified-xs>li:first-child { padding-left: 0px; }
-    .nav-justified-xs>li:last-child { padding-right: 0px; }
-}
-
-.nav-tabs.nav-justified>li>a { border: none !important; }
-
-.btn-75px { width: 75px; padding: 7px 0px; }
-.btn-80px { width: 80px; padding: 7px 0px; }
-.btn-90px { width: 90px; padding: 7px 0px; }
-.btn-100px { width: 100px; padding: 7px 0px; }
-
-.truncate {
-    white-space: nowrap;
-    width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -o-text-overflow: ellipsis;
-    -webkit-text-overflow: ellipsis;
-
-    /*width: 250px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;*/
-
-    /*text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;*/
-}
-
-.header-padding { padding-top: 50px; }
-
-.navbar-collapse { max-height: none !important; }
-
-.navbar-default { background-color: white; border-width: 0; }
-.navbar-default .navbar-toggle { border: 0; }
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-    background-color: transparent;
-}
-
-.navbar-form { border: 0; }
-.navbar-brand { padding: 10px 15px; }
-.navbar-toggle { padding: 10px 10px; }
-
-.navbar-nav .icon-lg { font-size: 1.2em; }
-
-.bg-F0F1EB { background-color: #F0F1EB; }
-.bg-F0F1EB .form-control, .bg-F0F1EB .input-group-addon{ background-color: white; }
-
-
-.home-banner {
-    background: #f0f1eb url('../images/home/tumblr_oan67aYRRE1qinh1vo1_1280-xs.jpg');
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: bottom right;
-}
-@media (min-width: 768px){
-    .home-banner {
-        background: #f0f1eb url('../images/home/tumblr_oan67aYRRE1qinh1vo1_1280-sm.jpg');
-        background-repeat: no-repeat;
-        background-attachment: scroll;
-        background-position: bottom right;
-    }
-    .home-banner h1 { font-size: 40px; }
-}
-@media (min-width: 992px) {
-    .home-banner {
-        background: #f0f1eb url('../images/home/tumblr_oan67aYRRE1qinh1vo1_1280.jpg');
-        background-repeat: no-repeat;
-        background-attachment: scroll;
-        background-position: bottom right;
-
-        height:100%;
-    }
-    .home-banner h1 { font-size: 45px; }
-}
-.home-banner {
-    padding-top: 150px;
-    padding-bottom: 150px;
-}
-@media (max-width: 767px) {
-    .home-banner {
-        padding-top: 100px;
-        padding-bottom: 530px;
-    }
-}
-
-
-.infinite-container>.infinite-item>.media { margin-top: 15px; }
-
-.share-icons .nav-justified>li {
-    display: table-cell;
-    width: 1%;
-    padding-right: 1px;
-    padding-left: 1px;
-}
-/*.social-nav .nav-justified>li { display: table-cell; width: 1%; }*/
-/*.social-nav .nav-tabs.nav-justified>li a:hover { border-bottom: none; }*/
-
-.social-nav .num { margin-right: 3px; width: 55px; }
-.social-nav .num a { padding: 10px 10px; text-align: center; }
-
-.player-area:hover { cursor: pointer !important; cursor: hand !important; }
-
-.bootstrap-datetimepicker-widget table td.active, .bootstrap-datetimepicker-widget table td.active:hover {
-    background-color: #DA2E75 !important;
-}
-
-.panel-group .panel-heading+.panel-collapse>.panel-body, .panel-group .panel-heading+.panel-collapse>.list-group {
-    border-top-color: transparent;
-}
-
-.user-link-icons { padding-right: 15px; }
-.user-link-icons i { vertical-align: 50%; }
-
-.ias-trigger { display: block; padding: 5px 10px;
-        /*font-size: 14px;*/
-        line-height: 1.5;
-        border-radius: 0; background-color: #f9f9f9; margin-bottom: 20px; }
-.ias-trigger a { color: #333; }
-
-.post-media-object { margin-bottom: 20px; }
-
-.post-text-object .lead { margin-bottom: 5px; }
-.post-text-object .media { margin-top: 2px; }
-.post-text-object { margin-top: 10px; margin-bottom: 20px; }
-
-.header-user { margin-top: 150px; }
-
-.post-media-icon {
-    position: absolute;
-    bottom: 25px;
-    right: 20px;
-}
-
-.img-margin-bottom-20 { padding-bottom: 20px; }
-
-.typed-cursor{
-    opacity: 1;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
-}
-@keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-webkit-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-moz-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
+/*
+Custom
+*/
+dialog::backdrop { opacity: .75; background: #333 url(../images/overlays.png); }
