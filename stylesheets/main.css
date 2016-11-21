@@ -18,6 +18,7 @@ html>body {
 Rules for sizing the icon.
 http://google.github.io/material-design-icons/
 */
+.material-icons.md-text { font-size: 90%; }
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
@@ -50,7 +51,7 @@ http://google.github.io/material-design-icons/
     height: 320px;
 }
 .demo-card-square>.mdl-card__title {
-    color: #fff;
+    /*color: #fff;*/
     background:
         /*url('../images/cherry-blossom-featured-image.jpg') center / cover;*/
         /*url('../images/home/tumblr_oan67aYRRE1qinh1vo1_1280.jpg') center / cover;*/
