@@ -35,7 +35,8 @@ http://google.github.io/material-design-icons/
 /* Uses a transparent header that draws on top of the layout's background */
 .demo-layout-transparent {
     background:
-        url('../images/tiles/sayagata-400px.png');
+        /*url('../images/tiles/sayagata-400px.png');*/
+        url('../images/asanoha-400px/asanoha-400px.png');
     /*background-color: #F0F1EB;*/
 }
 
@@ -123,6 +124,19 @@ dialog::backdrop { opacity: .75; background: #333 url(../images/overlays.png); }
   hyphens: auto;
 
 }
+
+/**
+ * Preventing Overflow with Ellipsis
+ */
+.ellipses {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/**
+ * Example
+ */
 .hyphenate {
   /* Careful, this breaks the word wherever it is without a hyphen */
   overflow-wrap: break-word;
@@ -133,13 +147,4 @@ dialog::backdrop { opacity: .75; background: #333 url(../images/overlays.png); }
   -ms-hyphens: auto;
   -moz-hyphens: auto;
   hyphens: auto;
-}
-
-/**
- * Preventing Overflow with Ellipsis
- */
-.ellipses {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
