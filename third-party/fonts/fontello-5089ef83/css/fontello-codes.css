@@ -6,7 +6,6 @@
 .icon-facebook:before { content: '\f09a'; } /* '' */
 .icon-github-circled:before { content: '\f09b'; } /* '' */
 .icon-rss:before { content: '\f09e'; } /* '' */
-.icon-gplus:before { content: '\f0d5'; } /* '' */
 .icon-linkedin:before { content: '\f0e1'; } /* '' */
 .icon-github:before { content: '\f113'; } /* '' */
 .icon-youtube-play:before { content: '\f16a'; } /* '' */
@@ -18,6 +17,7 @@
 .icon-skype:before { content: '\f17e'; } /* '' */
 .icon-foursquare:before { content: '\f180'; } /* '' */
 .icon-wordpress:before { content: '\f19a'; } /* '' */
+.icon-google:before { content: '\f1a0'; } /* '' */
 .icon-behance:before { content: '\f1b4'; } /* '' */
 .icon-soundcloud:before { content: '\f1be'; } /* '' */
 .icon-vine:before { content: '\f1ca'; } /* '' */

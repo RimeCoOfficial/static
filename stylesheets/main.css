@@ -47,19 +47,6 @@ http://google.github.io/material-design-icons/
     background-position: 25% 50%;
 }
 
-.demo-card-square.mdl-card {
-    /*width: 320px;*/
-    height: 320px;
-}
-.demo-card-square>.mdl-card__title {
-    /*color: #fff;*/
-    background:
-        /*url('../images/cherry-blossom-featured-image.jpg') center / cover;*/
-        /*url('../images/home/tumblr_oan67aYRRE1qinh1vo1_1280.jpg') center / cover;*/
-        url('../images/home/Untitled.jpg') center / cover;
-        /*url('https://i.ytimg.com/vi/HyssSSkwo8k/maxresdefault.jpg') center / cover;*/
-}
-
 .flex-flow-row-wrap { flex-flow: row wrap; }
 
 .max-width { width: 100% !important; }
