@@ -9827,9 +9827,10 @@ uniblog.common.extend("searchController", "articleSearchController", {
     render: function(a) {
         0 == a.count ? (a = {
             q: this.searchObject.q,
-            random_url: "/random/",
-            latest_url: "/",
-            about_google_url: "//google.com/about",
+            username: this.options.username,
+            random_url: this.options.base_url + "/random",
+            latest_url: this.options.base_url,
+            about_google_url: this.options.base_url + "/about",
             press_corner_url: "/press/"
         }, this.reset(), this.noResultsHandler.innerHTML = uniblog.templates.noResultsPage(a), uniblog.components.init(this.noResultsHandler)) : (this.updateCounter(a), this.noResultsHandler.innerText = "")
     },
@@ -10002,7 +10003,7 @@ if ("undefined" == typeof uniblog.templates && (uniblog.templates = {}), uniblog
         }) : "") + "<section><h2>" + soy.$$escapeHtml(e.title) + "</h2>" + (e.summary ? "<p>" + soy.$$escapeHtml(e.summary) + " </p>" : "") + "</section></a>"
     }, "undefined" == typeof uniblog) var uniblog = {};
 if ("undefined" == typeof uniblog.templates && (uniblog.templates = {}), uniblog.templates.noResultsPage = function(e, a) {
-        return e = e || {}, "<div class=\"uni-wrapper\"><div class=\"uni-no-results-alignment\" uni-component=\"externalLinks\"><p>Try changing it up, or :</p><ul uni-component=\"analytics\" data-analytics=\"{'category': 'article lead', 'action': 'search result zero', 'label': 'article: {slug}'}\"><li>Feeling lucky? Take your chances with a <a href=\"" + soy.$$escapeHtml(e.random_url) + "\" data-analytics=\"{'action': 'random article - search result zero'}\">random article</a> from our archives</li><li><a href=\"" + soy.$$escapeHtml(e.latest_url) + "\" data-analytics=\"{'action': 'latest from ink - search result zero', 'label': 'article: home'}\">Read the latest from The Keyword</a></li></ul><ul uni-component=\"analytics\" data-analytics=\"{'category': 'navigation', 'action': 'search result zero', 'label': 'article: {slug}'}\"><li>Learn even more <a href=\"" + soy.$$escapeHtml(e.about_google_url) + '">about Google</a></li><li>Member of the press? Find media assets in our <a href="' + soy.$$escapeHtml(e.press_corner_url) + '">Press Corner</a></li></ul><ul uni-component="analytics" data-analytics="{\'category\': \'social\', \'action\': \'follow - search result zero\', \'label\': \'social network: {name}|account:uniblog\'}"><li>Follow us on social :<nav class="uni-social-network"><a class="uni-icon-google" target="_blank" href="//plus.google.com/116899029375914044550" aria-label="Google+"></a><a class="uni-icon-twitter" target="_blank" href="//twitter.com/google" aria-label="Twitter"></a><a class="uni-icon-facebook" target="_blank" href="//www.facebook.com/Google" aria-label="Facebook"></a></nav></li></ul></div></div>'
+        return e = e || {}, "<div class=\"uni-wrapper\"><div class=\"uni-no-results-alignment\" uni-component=\"externalLinks\"><p>Try changing it up, or :</p><ul uni-component=\"analytics\" data-analytics=\"{'category': 'article lead', 'action': 'search result zero', 'label': 'article: {slug}'}\"><li>Feeling lucky? Take your chances with a <a href=\"" + soy.$$escapeHtml(e.random_url) + "\" data-analytics=\"{'action': 'random article - search result zero'}\">random article</a> from our archives</li><li><a href=\"" + soy.$$escapeHtml(e.latest_url) + "\" data-analytics=\"{'action': 'latest from ink - search result zero', 'label': 'article: home'}\">Read the latest</a></li></ul><ul uni-component=\"analytics\" data-analytics=\"{'category': 'navigation', 'action': 'search result zero', 'label': 'article: {slug}'}\"><li>Learn even about <a href=\"" + soy.$$escapeHtml(e.about_google_url) + '">' + e.username + '</a></li></ul></div></div>'
     }, "undefined" == typeof uniblog) var uniblog = {};
 if ("undefined" == typeof uniblog.templates && (uniblog.templates = {}), uniblog.templates.pressImageList = function(e, a) {
         for (var t = "<div class=\"uni-press-image-list-item\" tabindex=\"0\" uni-component=\"modal\" uni-options=\"{'template': 'imageFeatures', 'data': {'title': '" + uniblog.utils.replaceQuotations({
