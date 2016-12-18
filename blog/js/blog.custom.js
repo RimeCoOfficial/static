@@ -9215,7 +9215,7 @@ uniblog.common.component("searchBar", {
     },
     getTypeAhead: function(a) {
         (a = this.searchBox.value.trim()) && 0 < a.length && this.typeAhead.query !== a && (this.typeAhead.call && this.typeAhead.call.isActive() && this.typeAhead.call.abort(), this.typeAhead.query = a,
-            this.typeAhead.call = goog.net.XhrIo.send("/api/v1/type-ahead/?q=" + a, this.onGetTypeAhead.bind(this)))
+            this.typeAhead.call = goog.net.XhrIo.send(this.options.endpoint + "?q=" + a, this.onGetTypeAhead.bind(this)))
     },
     setFocus: function() {
         this.searchBox.focus()
