@@ -8971,7 +8971,7 @@ uniblog.common.component("searchForm", {
         13 === a.keyCode && (this.search(), a.preventDefault())
     },
     search: function() {
-        uniblog.utils.search(this.searchObject, this.options.allowEmptySearch, this.options.searchPage);
+        uniblog.utils.search(this.options.searchUrl, this.searchObject, this.options.allowEmptySearch, this.options.searchPage);
         this.emit(uniblog.common.events.searchForm.onSearch, this.searchObject)
     }
 });
@@ -9542,9 +9542,11 @@ uniblog.common.component("searchController", {
     },
     inProgressClass: "uni-search-in-progress",
     init: function() {
+        dataOptions = uniblog.utils.getDataOptions(this.handler);
+        endpoint = dataOptions.endpoint + "?";
         this.options = {
             allowEmptySearch: !1,
-            endpoint: uniblog.common.constants.SEARCH_API,
+            endpoint: endpoint, // uniblog.common.constants.SEARCH_API,
             searchBar: uniblog.common.events.searchBar.onSearch
         };
         goog.object.extend(this.options, uniblog.utils.getDataOptions(this.handler));
