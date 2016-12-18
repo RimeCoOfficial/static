@@ -8711,9 +8711,9 @@ uniblog.utils = function() {
             "?" != e[e.length - 1] && (e += "?");
             return e += f.join("&")
         },
-        search: function(a, b, c) {
+        search: function(endpoint, a, b, c) {
             var d;
-            c = c || uniblog.common.constants.SEARCH_URL;
+            c = c || endpoint; // uniblog.common.constants.SEARCH_URL;
             if (a.q || b) b = window.location.pathname + window.location.search + window.location.hash, d = this.formatUrl(c,
                 a), d !== b && (0 === b.indexOf(c) ? window.history.pushState({
                 options: a
@@ -9225,7 +9225,7 @@ uniblog.common.component("searchBar", {
         this.searchObject.q = this.searchBox.value.trim();
         this.searchBox.blur();
         this.disableSearch();
-        "" !== this.searchObject.q && (uniblog.utils.search(this.searchObject), this.emit(uniblog.common.events.searchBar.onSearch, this.searchObject))
+        "" !== this.searchObject.q && (uniblog.utils.search(this.options.searchUrl, this.searchObject), this.emit(uniblog.common.events.searchBar.onSearch, this.searchObject))
     },
     onGetTypeAhead: function(a) {
         this.typeAhead.currentSelectedItem = null;
