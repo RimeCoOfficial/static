@@ -1,6 +1,6 @@
 # Static
 
-[![](./images/favicon.png)](http://rimeofficial.github.io/static/images/favicon.png)
+![](./images/favicon.png)
 
 ## Pre-commit
 
