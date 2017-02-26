@@ -39,12 +39,49 @@ http://google.github.io/material-design-icons/
         url('../images/asanoha-400px/asanoha-400px.png');
     /*background-color: #F0F1EB;*/
 }
+.demo-layout-transparent .mdl-grid {
+    max-width: 1280px;
+}
 
 .demo-layout-transparent-home {
     background:
         url('../images/tumblr_oan67aYRRE1qinh1vo1_12801.jpg');
     background-size: cover;
     background-position: 25% 50%;
+}
+
+/*.demo-card-square.mdl-card {
+    width: 320px;
+    height: 320px; 
+}*/
+.demo-card-square > .mdl-card__title {
+    height: 320px;
+    /*color: #fff;*/
+    background:
+        url('../images/tumblr_oan67aYRRE1qinh1vo1_12801.jpg') center / cover;
+    /*background-size: cover;*/
+    background-position: 25% 50%;
+}
+
+.demo-card-square-intro > .mdl-card__title {
+    height: 200px;
+    color: #fff;
+    background:
+        url('../images/welcome_card.jpg') center / cover;
+    /*background-size: cover;*/
+    /*background-position: 25% 50%;*/
+}
+
+.demo-card-wide.mdl-card {
+  width: 512px;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('../assets/demos/welcome_card.jpg') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
 }
 
 .flex-flow-row-wrap { flex-flow: row wrap; }
