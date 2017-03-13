@@ -86,6 +86,21 @@ http://google.github.io/material-design-icons/
   color: #fff;
 }
 
+
+.demo-card-event {
+    /*background: url(images/example-blog05.jpg) center / cover;*/
+}
+
+.demo-card-event > .mdl-card__actions {
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
 /*
 Twitter Emoji
 */
@@ -183,17 +198,3 @@ dialog::backdrop { opacity: .75; background: #333 url(../images/overlays.png); }
     background-size: cover;
 }
 .bg-cover-transparent { background-color: transparent; }
-
-/*.demo-card-event {
-    background: url(images/example-blog05.jpg) center / cover;
-}
-*/
-.demo-card-event > .mdl-card__actions {
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    box-sizing: border-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-}
