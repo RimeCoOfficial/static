@@ -9,7 +9,7 @@
 #   SCSS lint (https://github.com/causes/scss-lint)
 #
 # @version  1.0.0
-# @author Shubhajit Saha <www@suvozit.com>
+# @author Shubhajit Saha <suvozit@rime.co>
 
 # create empty errors array
 declare -a errors
@@ -38,97 +38,97 @@ echo '2. Minify JS/CSS files'
 files=$(git diff --name-only HEAD | grep 'javascripts/.*')
 if [ -n "$files" ]; then
 
-  for file in $files; do
+    for file in $files; do
 
-    file_name_ext=$(basename "$file")
-    dest_dir=$(dirname "$file")
-    file_name="${file_name_ext%.*}"
-    file_ext="${file_name_ext##*.}" 
-    
-    dest_file="$dest_dir/$file_name.min.$file_ext"
+        file_name_ext=$(basename "$file")
+        dest_dir=$(dirname "$file")
+        file_name="${file_name_ext%.*}"
+        file_ext="${file_name_ext##*.}" 
+        
+        dest_file="$dest_dir/$file_name.min.$file_ext"
 
-    # remove old *.min.ext file
-    old_file=`find "$dest_dir" -maxdepth 1 | grep "$file_name.min.$file_ext" -m1`
-    if [ ! -z "$old_file" ]; then
-      echo "-- $old_file"
-      git rm "$old_file"
-    fi
+        # remove old *.min.ext file
+        old_file=`find "$dest_dir" -maxdepth 1 | grep "$file_name.min.$file_ext" -m1`
+        if [ ! -z "$old_file" ]; then
+            echo "-- $old_file"
+            git rm "$old_file"
+        fi
 
-    # minify
-    echo "Searching for YUI Compressor..."
-    YUIC="/usr/local/bin/yuicompressor"
+        # minify
+        echo "Searching for YUI Compressor..."
+        YUIC="/usr/local/bin/yuicompressor"
 
-    if [ -l "$YUIC" ]; then
-      echo "Unable to find YUI Compressor! Goodbye!"
-      exit 1
-    fi
+        if [ -l "$YUIC" ]; then
+            echo "Unable to find YUI Compressor! Goodbye!"
+            exit 1
+        fi
 
-    echo "YUI Compressor found! Start compressing..."
+        echo "YUI Compressor found! Start compressing..."
 
-    echo "$file_name_ext => $dest_file"
-    
-    $YUIC $file > $dest_file
-    # output=`$YUIC $file > $dest_file`
-    # # if our output is not empty, there were errors
-    # if [ -n "$output" ]; then
-    #   echo "$file contains scss syntax errors"
-    #   errors=("${errors[@]}" "$output")
-    # fi
+        echo "$file_name_ext => $dest_file"
+        
+        $YUIC $file > $dest_file
+        # output=`$YUIC $file > $dest_file`
+        # # if our output is not empty, there were errors
+        # if [ -n "$output" ]; then
+        #   echo "$file contains scss syntax errors"
+        #   errors=("${errors[@]}" "$output")
+        # fi
 
-    git add "$dest_file"
+        git add "$dest_file"
 
-  done
+    done
 fi
 
 # files=$(git diff-index --name-only --diff-filter=ACMR $against | grep 'stylesheets/.*\.css$')
 files=$(git diff --name-only HEAD | grep 'stylesheets/.*')
 if [ -n "$files" ]; then
 
-  for file in $files; do
+    for file in $files; do
 
-    file_name_ext=$(basename "$file")
-    dest_dir=$(dirname "$file")
-    file_name="${file_name_ext%.*}"
-    file_ext="${file_name_ext##*.}" 
-    
-    dest_file="$dest_dir/$file_name.min.$file_ext"
+        file_name_ext=$(basename "$file")
+        dest_dir=$(dirname "$file")
+        file_name="${file_name_ext%.*}"
+        file_ext="${file_name_ext##*.}" 
+        
+        dest_file="$dest_dir/$file_name.min.$file_ext"
 
-    # remove old *.min.ext file
-    old_file=`find "$dest_dir" -maxdepth 1 | grep "$file_name.min.$file_ext" -m1`
-    if [ ! -z "$old_file" ]; then
-      echo "-- $old_file"
-      git rm "$old_file"
-    fi
+        # remove old *.min.ext file
+        old_file=`find "$dest_dir" -maxdepth 1 | grep "$file_name.min.$file_ext" -m1`
+        if [ ! -z "$old_file" ]; then
+            echo "-- $old_file"
+            git rm "$old_file"
+        fi
 
-    # minify
-    echo "Searching for YUI Compressor..."
-    YUIC="/usr/local/bin/yuicompressor"
+        # minify
+        echo "Searching for YUI Compressor..."
+        YUIC="/usr/local/bin/yuicompressor"
 
-    if [ -l "$YUIC" ]; then
-      echo "Unable to find YUI Compressor! Goodbye!"
-      exit 1
-    fi
+        if [ -l "$YUIC" ]; then
+            echo "Unable to find YUI Compressor! Goodbye!"
+            exit 1
+        fi
 
-    echo "YUI Compressor found! Start compressing..."
+        echo "YUI Compressor found! Start compressing..."
 
-    echo "$file_name_ext => $dest_file"
-    
-    $YUIC $file > $dest_file
-    # output=`$YUIC $file > $dest_file`
-    # # if our output is not empty, there were errors
-    # if [ -n "$output" ]; then
-    #   echo "$file contains scss syntax errors"
-    #   errors=("${errors[@]}" "$output")
-    # fi
+        echo "$file_name_ext => $dest_file"
+        
+        $YUIC $file > $dest_file
+        # output=`$YUIC $file > $dest_file`
+        # # if our output is not empty, there were errors
+        # if [ -n "$output" ]; then
+        #   echo "$file contains scss syntax errors"
+        #   errors=("${errors[@]}" "$output")
+        # fi
 
-    git add "$dest_file"
+        git add "$dest_file"
 
-  done
+    done
 fi
 
 # if we have errors, exit with 1
 if [ -n "$errors" ]; then
-  exit 1
+    exit 1
 fi
 
 echo '🍺  No errors found!'
