@@ -1,6 +1,6 @@
 # Static
 
-![](./images/favicon.png)
+![](./images/logo-share.png)
 
 ## Pre-commit
 
