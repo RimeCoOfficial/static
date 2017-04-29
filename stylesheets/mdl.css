@@ -47,7 +47,7 @@ http://google.github.io/material-design-icons/
 
 .demo-layout-transparent-home {
     background:
-        url('../images/tumblr_oan67aYRRE1qinh1vo1_12801.jpg');
+        url('../images/unspalsh/ehud-neuhaus-191867 copy.jpg');
     background-size: cover;
     background-position: 25% 50%;
 }
@@ -93,7 +93,7 @@ http://google.github.io/material-design-icons/
 
 .demo-card-event > .mdl-card__actions {
     -webkit-align-items: center;
-        -ms-flex-align: center;
+         -ms-flex-align: center;
             align-items: center;
     box-sizing: border-box;
     display: -webkit-flex;
