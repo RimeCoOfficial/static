@@ -187,7 +187,8 @@ dialog::backdrop { opacity: .75; background: #333 url(../images/overlays.png); }
 
 .flex-flow-row-wrap { flex-flow: row wrap; }
 
-.max-width { width: 100% !important; }
+.full-width { width: 100% !important; }
+.img-fluid { max-width: 100%; display: block; }
 
 .bg-cover {
     background-color: #f9f9f9;
