@@ -34,23 +34,9 @@ http://google.github.io/material-design-icons/
 .material-icons.md-light { color: rgba(255, 255, 255, 1); }
 .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
 
-/* Uses a transparent header that draws on top of the layout's background */
-.demo-layout-transparent {
-    background:
-        /*url('../images/tiles/sayagata-400px.png');*/
-        url('../images/asanoha-400px/asanoha-400px.png');
-    /*background-color: #F0F1EB;*/
-}
-.demo-layout-transparent .mdl-grid {
+/*.demo-layout-transparent .mdl-grid {
     max-width: 1280px;
-}
-
-.demo-layout-transparent-home {
-    background:
-        url('../images/unspalsh/ehud-neuhaus-191867 copy.jpg');
-    background-size: cover;
-    background-position: 25% 50%;
-}
+}*/
 
 /*.demo-card-square.mdl-card {
     width: 320px;
@@ -114,12 +100,8 @@ img.emoji {
 /*
 Bootstrap elements
 */
-.pull-left {
-    float: left !important;
-}
-.pull-right {
-    float: right !important;
-}
+.pull-left  {   float:  left    !important; }
+.pull-right {   float: right    !important; }
 
 /**
  * Handling Long Words and URLs (Forcing Breaks, Hyphenation, Ellipsis, etc)
@@ -188,7 +170,7 @@ dialog::backdrop { opacity: .75; background: #333 url(../images/overlays.png); }
 .flex-flow-row-wrap { flex-flow: row wrap; }
 
 .full-width { width: 100% !important; }
-.img-fluid { max-width: 100%; display: block; }
+.img-fluid  { max-width: 100%; display: block; }
 
 .bg-cover {
     background-color: #f9f9f9;
