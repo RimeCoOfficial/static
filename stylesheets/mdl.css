@@ -34,9 +34,14 @@ http://google.github.io/material-design-icons/
 .material-icons.md-light { color: rgba(255, 255, 255, 1); }
 .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
 
-/*.demo-layout-transparent .mdl-grid {
+
+.demo-layout-transparent {
+  background: url('../images/subtlepatterns.com/asanoha-400px/asanoha-400px.png');
+}
+
+.demo-layout-transparent .mdl-grid {
     max-width: 1280px;
-}*/
+}
 
 /*.demo-card-square.mdl-card {
     width: 320px;
@@ -46,7 +51,7 @@ http://google.github.io/material-design-icons/
     height: 320px;
     /*color: #fff;*/
     background:
-        url('../images/tumblr_oan67aYRRE1qinh1vo1_12801.jpg') center / cover;
+        url('../images/tumblr.com/tumblr_oan67aYRRE1qinh1vo1_12801.jpg') center / cover;
     /*background-size: cover;*/
     background-position: 25% 50%;
 }
