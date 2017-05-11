@@ -1,20 +1,15 @@
 /* 
+
 Make something awesome!
 ---
-
 color scheme primary: #DA2E75
+
 */
 
-html>body {
-    /*font-family: 'Roboto','Helvetica','Arial',sans-serif!important;*/
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    background-color: #FAFAFA;
-}
-
-.mdl-textfield__input {
-    /*font-family: 'Roboto','Helvetica','Arial',sans-serif!important;*/
+html>body, .mdl-textfield__input {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
+html>body { background-color: #FAFAFA; }
 
 /*
 Rules for sizing the icon.
@@ -38,15 +33,15 @@ http://google.github.io/material-design-icons/
 .demo-layout-transparent {
   background: url('../images/subtlepatterns.com/asanoha-400px/asanoha-400px.png');
 }
-
 .demo-layout-transparent .mdl-grid {
     max-width: 1280px;
 }
 
-/*.demo-card-square.mdl-card {
-    width: 320px;
-    height: 320px; 
-}*/
+/*
+demo-card-square
+demo-card-wide
+demo-card-event
+ */
 .demo-card-square > .mdl-card__title {
     height: 320px;
     /*color: #fff;*/
@@ -54,32 +49,6 @@ http://google.github.io/material-design-icons/
         url('../images/tumblr.com/tumblr_oan67aYRRE1qinh1vo1_12801.jpg') center / cover;
     /*background-size: cover;*/
     background-position: 25% 50%;
-}
-
-.demo-card-square-intro > .mdl-card__title {
-    height: 200px;
-    color: #fff;
-    background:
-        url('../images/welcome_card.jpg') center / cover;
-    /*background-size: cover;*/
-    /*background-position: 25% 50%;*/
-}
-
-.demo-card-wide.mdl-card {
-  width: 512px;
-}
-.demo-card-wide > .mdl-card__title {
-  color: #fff;
-  height: 176px;
-  background: url('../assets/demos/welcome_card.jpg') center / cover;
-}
-.demo-card-wide > .mdl-card__menu {
-  color: #fff;
-}
-
-
-.demo-card-event {
-    /*background: url(images/example-blog05.jpg) center / cover;*/
 }
 
 .demo-card-event > .mdl-card__actions {
@@ -105,8 +74,9 @@ img.emoji {
 /*
 Bootstrap elements
 */
-.pull-left  {   float:  left    !important; }
-.pull-right {   float: right    !important; }
+.pull-left      { float:  left    !important; }
+.pull-right     { float: right    !important; }
+.center-block   { display: block; margin-left: auto; margin-right: auto; }
 
 /**
  * Handling Long Words and URLs (Forcing Breaks, Hyphenation, Ellipsis, etc)
