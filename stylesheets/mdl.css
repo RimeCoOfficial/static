@@ -9,7 +9,7 @@ color scheme primary: #DA2E75
 html>body, .mdl-textfield__input {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
-html>body { background-color: #FAFAFA; }
+html>body { background-color: #FFFFFF; }
 
 /*
 Rules for sizing the icon.
@@ -31,7 +31,7 @@ http://google.github.io/material-design-icons/
 
 
 .demo-layout-transparent {
-  background: url('../images/subtlepatterns.com/asanoha-400px/asanoha-400px.png');
+    background: url('../images/subtlepatterns.com/asanoha-400px/asanoha-400px.png');
 }
 .demo-layout-transparent .mdl-grid {
     max-width: 1280px;
