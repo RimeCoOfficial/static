@@ -34,10 +34,12 @@ http://google.github.io/material-design-icons/
 
 
 .demo-layout-transparent {
-    background: url('../images/subtlepatterns.com/asanoha-400px/asanoha-400px.png');
+    /*background: url('../third-party/getmdl.io/transparent.jpg') center / cover;*/
+    background: url('../third-party/toptal.com-subtlepatterns/struckaxiom.png');
 }
 .demo-layout-transparent .mdl-grid {
-    max-width: 1280px;
+    max-width: 1080px;
+    margin-top: 2.5%;
 }
 
 /*
@@ -46,11 +48,9 @@ demo-card-wide
 demo-card-event
  */
 .demo-card-square > .mdl-card__title {
-    height: 320px;
-    /*color: #fff;*/
+    height: 300px;
     background:
-        url('../images/tumblr.com/tumblr_oan67aYRRE1qinh1vo1_12801.jpg') center / cover;
-    /*background-size: cover;*/
+        url('../third-party/tumblr.com/tumblr_oan67aYRRE1qinh1vo1_12801.jpg') center / cover;
     background-position: 25% 50%;
 }
 
