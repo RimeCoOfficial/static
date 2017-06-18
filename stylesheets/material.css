@@ -33,25 +33,84 @@ http://google.github.io/material-design-icons/
 .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
 
 
-.demo-layout-transparent {
+/*
+demo-layout--none
+demo-layout-transparent
+demo-layout-waterfall
+demo-layout--fixed-drawer
+*/
+
+/*
+<!-- Uses a transparent header that draws on top of the layout's background -->
+ */
+.home-layout-transparent.mdl-layout {
+    background: url('../third-party/unspalsh.com/joel-filipe-151692.jpg') center / cover;
+}
+
+/**
+ * 
+ * https://codepen.io/peiche/pen/PPPRgz
+ * 
+ */
+.home-layout-transparent .mdl-layout__header {
+    /*add background transition*/
+    transition-property: max-height, box-shadow, background;
+}
+
+.home-layout-transparent .mdl-layout__header.is-casting-shadow {
+    /*override initial background when scrolling*/
+    background-color: #fff;
+}
+
+.home-layout-transparent .is-focused .mdl-textfield__input {
+    border-color: #fff;
+}
+
+.home-layout-transparent .mdl-layout__header-row {
+    padding-left: 40px;
+}
+
+.home-layout-transparent.is-small-screen .mdl-layout__header-row {
+    padding-left: 60px;
+}
+
+/*
+<!-- Uses a header that contracts as the page scrolls down. -->
+ */
+.home-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type  {
+    padding-right: 0;
+}
+
+.auth-layout-transparent {
     /*background: url('../third-party/getmdl.io/transparent.jpg') center / cover;*/
     background: url('../third-party/toptal.com-subtlepatterns/struckaxiom.png');
 }
-.demo-layout-transparent .mdl-grid {
+.auth-layout-transparent .mdl-grid {
     max-width: 1080px;
     margin-top: 2.5%;
 }
+
+.demo-layout-transparent {
+    background: url('../third-party/toptal.com-subtlepatterns/hip-square.png');
+}
+
 
 /*
 demo-card-square
 demo-card-wide
 demo-card-event
  */
-.demo-card-square > .mdl-card__title {
+.auth-card-square > .mdl-card__title {
     height: 300px;
     background:
         url('../third-party/tumblr.com/tumblr_oan67aYRRE1qinh1vo1_12801.jpg') center / cover;
     background-position: 25% 50%;
+}
+
+.demo-card-square > .mdl-card__title {
+    height: 500px;
+    background:
+        url('../third-party/tumblr.com/tumblr_oan67aYRRE1qinh1vo1_1280.jpg') center / cover;
 }
 
 .demo-card-event > .mdl-card__actions {
@@ -63,6 +122,8 @@ demo-card-event
     display: -ms-flexbox;
     display: flex;
 }
+
+.demo-card-error {  }
 
 /*
 Twitter Emoji
@@ -148,7 +209,7 @@ Bootstrap elements
 /**
  * Custom
  */
-dialog::backdrop { opacity: .75; background: #333 url(../images/overlays.png); }
+dialog::backdrop { opacity: .75; background: #333 url(../images/overlay/dot.png); }
 
 .flex-flow-row-wrap { flex-flow: row wrap; }
 
