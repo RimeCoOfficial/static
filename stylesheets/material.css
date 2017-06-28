@@ -108,7 +108,7 @@ demo-card-event
 }
 
 .demo-card-square > .mdl-card__title {
-    height: 500px;
+    height: 300px;
     background:
         url('../third-party/tumblr.com/tumblr_oan67aYRRE1qinh1vo1_1280.jpg') center / cover;
 }
@@ -123,7 +123,7 @@ demo-card-event
     display: flex;
 }
 
-.demo-card-error {  }
+.error-layout .mdl-card {  }
 
 /*
 Twitter Emoji
@@ -209,7 +209,7 @@ Bootstrap elements
 /**
  * Custom
  */
-dialog::backdrop { opacity: .75; background: #333 url(../images/overlay/dot.png); }
+dialog::backdrop { opacity: .75; background: #333 url(../images/dot.png); }
 
 .flex-flow-row-wrap { flex-flow: row wrap; }
 
