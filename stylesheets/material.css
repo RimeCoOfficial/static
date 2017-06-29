@@ -202,14 +202,21 @@ Bootstrap elements
     white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
     white-space: -pre-wrap;      /* Opera 4-6 */
     white-space: -o-pre-wrap;    /* Opera 7 */
-    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    word-wrap:   break-word;     /* Internet Explorer 5.5+ */
 }
 
 
 /**
  * Custom
  */
-dialog::backdrop { opacity: .75; background: #333 url(../images/dot.png); }
+dialog::backdrop {
+    opacity: .75;
+    background: #333 url(../images/dot.png);
+}
+.mdl-layout__obfuscator.is-visible {
+    opacity: .75;
+    background: #333 url(../images/dot.png);
+}
 
 .flex-flow-row-wrap { flex-flow: row wrap; }
 
@@ -224,4 +231,3 @@ dialog::backdrop { opacity: .75; background: #333 url(../images/dot.png); }
     -o-background-size: cover;
     background-size: cover;
 }
-.bg-cover-transparent { background-color: transparent; }
