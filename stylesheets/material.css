@@ -6,6 +6,10 @@ color scheme primary: #DA2E75
 
 */
 
+/**
+ * Material Design 
+ * https://getmdl.io 
+ */
 html>body, .mdl-textfield__input {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
@@ -140,7 +144,7 @@ img.emoji {
 }
 
 /*
-Bootstrap elements
+Bootstrap CSS reference elements
 */
 .pull-left  { float:  left !important; }
 .pull-right { float: right !important; }
@@ -150,6 +154,13 @@ Bootstrap elements
     margin-left: auto;
     margin-right: auto;
 }
+
+.img-responsive,.thumbnail a>img,.thumbnail>img{display:block;max-width:100%;height:auto}
+.img-rounded{border-radius:6px}
+.img-thumbnail{display:inline-block;max-width:100%;height:auto;padding:4px;line-height:1.42857143;background-color:#fff;border:1px solid #ddd;border-radius:4px;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out}
+.img-circle{border-radius:50%}
+
+.img-fluid  { max-width: 100%; }
 
 /**
  * Handling Long Words and URLs (Forcing Breaks, Hyphenation, Ellipsis, etc)
@@ -209,10 +220,8 @@ Bootstrap elements
     word-wrap:   break-word;     /* Internet Explorer 5.5+ */
 }
 
+.flex-flow-row-wrap { flex-flow: row wrap; }
 
-/**
- * Custom
- */
 dialog::backdrop {
     opacity: .75;
     background: #333 url(../images/dot.png);
@@ -222,10 +231,7 @@ dialog::backdrop {
     background: #333 url(../images/dot.png);
 }
 
-.flex-flow-row-wrap { flex-flow: row wrap; }
-
 .full-width { width: 100% !important; }
-.img-fluid  { max-width: 100%; }
 
 .bg-cover {
     background-color: transparent;
