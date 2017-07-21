@@ -38,7 +38,6 @@ http://google.github.io/material-design-icons/
 
 
 /*
-demo-layout--none
 demo-layout-transparent
 demo-layout-waterfall
 demo-layout--fixed-drawer
@@ -93,11 +92,11 @@ demo-layout--fixed-drawer
     padding-left: 16px;
 }
 
-.auth-layout-transparent {
+.demo-layout-auth, .demo-layout-intro {
     /*background: url('../third-party/getmdl.io/transparent.jpg') center / cover;*/
     background: url('../third-party/toptal.com-subtlepatterns/struckaxiom.png');
 }
-.auth-layout-transparent .mdl-grid {
+.demo-layout-auth .mdl-grid, .demo-layout-start .mdl-grid, .demo-layout-intro .mdl-grid {
     max-width: 1080px;
     margin-top: 2.5%;
 }
@@ -111,13 +110,15 @@ demo-layout--fixed-drawer
     background-color: white;
 }
 
+.demo-layout-error {}
+
 
 /*
 demo-card-square
 demo-card-wide
 demo-card-event
  */
-.auth-card-square > .mdl-card__title {
+.demo-layout-auth .demo-card-square > .mdl-card__title {
     height: 300px;
     background:
         url('../third-party/tumblr.com/tumblr_oan67aYRRE1qinh1vo1_12801.jpg') center / cover;
@@ -139,8 +140,6 @@ demo-card-event
     display: -ms-flexbox;
     display: flex;
 }
-
-.error-layout .mdl-card {  }
 
 /*
 Twitter Emoji
