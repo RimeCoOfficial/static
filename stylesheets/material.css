@@ -98,7 +98,8 @@ demo-layout--fixed-drawer
     background: url('../third-party/toptal.com-subtlepatterns/hip-square.png');
 }
 
-.demo-layout-settings .mdl-layout__tab-bar-button {
+.demo-layout-settings .mdl-layout__tab-bar-button,
+.demo-layout-custom .mdl-layout__tab-bar-button {
     background-color: white;
 }
 
