@@ -47,7 +47,7 @@ demo-layout--fixed-drawer
 /*
 <!-- Uses a transparent header that draws on top of the layout's background -->
  */
-.home-layout-transparent.mdl-layout {
+.demo-layout-landing.mdl-layout {
     background: url('../third-party/unspalsh.com/joel-filipe-151692.jpg') center / cover;
 }
 
@@ -56,33 +56,41 @@ demo-layout--fixed-drawer
  * https://codepen.io/peiche/pen/PPPRgz
  * 
  */
-.home-layout-transparent .mdl-layout__header {
+.demo-layout-landing .mdl-layout__header {
     /*add background transition*/
     transition-property: max-height, box-shadow, background;
 }
 
-.home-layout-transparent .mdl-layout__header.is-casting-shadow {
+.demo-layout-landing .mdl-layout__header.is-casting-shadow {
     /*override initial background when scrolling*/
     background-color: white;
 }
 
-.home-layout-transparent .is-focused .mdl-textfield__input {
+.demo-layout-landing .is-focused .mdl-textfield__input {
     border-color: white;
 }
 
-.home-layout-transparent .mdl-layout__header-row {
+.demo-layout-landing .mdl-layout__header-row {
     padding-left: 40px;
 }
 
-.home-layout-transparent.is-small-screen .mdl-layout__header-row {
+.demo-layout-landing.is-small-screen .mdl-layout__header-row {
     padding-left: 60px;
 }
 
 /*
 <!-- Uses a header that contracts as the page scrolls down. -->
  */
-.home-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type  {
+.mdl-layout__header-row .mdl-navigation__link:last-of-type  {
     padding-right: 0;
+}
+
+.demo-layout-dashboard .mdl-layout__header-row {
+    padding-left: 40px;
+}
+
+.demo-layout-dashboard.is-small-screen .mdl-layout__header-row {
+    padding-left: 16px;
 }
 
 .auth-layout-transparent {
@@ -156,7 +164,7 @@ Bootstrap CSS reference elements
     margin-right: auto;
 }
 
-.img-responsive,.thumbnail a>img,.thumbnail>img{display:block;max-width:100%;height:auto}
+.img-responsive{display:block;max-width:100%;height:auto}
 .img-rounded{border-radius:6px}
 .img-thumbnail{display:inline-block;max-width:100%;height:auto;padding:4px;line-height:1.42857143;background-color:#fff;border:1px solid #ddd;border-radius:4px;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out}
 .img-circle{border-radius:50%}
