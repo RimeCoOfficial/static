@@ -59,11 +59,11 @@ demo-layout--fixed-drawer
 
 .home-layout-transparent .mdl-layout__header.is-casting-shadow {
     /*override initial background when scrolling*/
-    background-color: #fff;
+    background-color: white;
 }
 
 .home-layout-transparent .is-focused .mdl-textfield__input {
-    border-color: #fff;
+    border-color: white;
 }
 
 .home-layout-transparent .mdl-layout__header-row {
@@ -92,6 +92,10 @@ demo-layout--fixed-drawer
 
 .demo-layout-transparent {
     background: url('../third-party/toptal.com-subtlepatterns/hip-square.png');
+}
+
+.demo-layout-settings .mdl-layout__tab-bar-button {
+    background-color: white;
 }
 
 
