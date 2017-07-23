@@ -77,16 +77,11 @@ demo-layout--fixed-drawer
     padding-left: 60px;
 }
 
-/*
-<!-- Uses a header that contracts as the page scrolls down. -->
- */
-.mdl-layout__header-row .mdl-navigation__link:last-of-type  {
-    padding-right: 0;
-}
-
 .demo-layout-dashboard .mdl-layout__header-row,
 .demo-layout-user .mdl-layout__header-row,
 .demo-layout-start .mdl-layout__header-row,
+.demo-layout-intro .mdl-layout__header-row,
+.demo-layout-auth .mdl-layout__header-row,
 .demo-layout-about .mdl-layout__header-row {
     padding-left: 40px;
 }
@@ -94,30 +89,21 @@ demo-layout--fixed-drawer
 .demo-layout-dashboard.is-small-screen .mdl-layout__header-row,
 .demo-layout-user.is-small-screen .mdl-layout__header-row,
 .demo-layout-start.is-small-screen .mdl-layout__header-row,
+.demo-layout-intro.is-small-screen .mdl-layout__header-row,
+.demo-layout-auth.is-small-screen .mdl-layout__header-row,
 .demo-layout-about.is-small-screen .mdl-layout__header-row {
     padding-left: 16px;
 }
 
-.demo-layout-auth, .demo-layout-intro {
-    /*background: url('../third-party/getmdl.io/transparent.jpg') center / cover;*/
+.demo-layout-auth {
     background: url('../third-party/toptal.com-subtlepatterns/struckaxiom.png');
 }
-.demo-layout-auth .mdl-grid,
-.demo-layout-intro .mdl-grid {
-    max-width: 1080px;
-    margin-top: 2.5%;
-}
 
-.demo-layout-transparent {
-    background: url('../third-party/toptal.com-subtlepatterns/hip-square.png');
-}
 
 .demo-layout-settings .mdl-layout__tab-bar-button,
 .demo-layout-custom .mdl-layout__tab-bar-button {
     background-color: white;
 }
-
-.demo-layout-error {}
 
 
 /*
