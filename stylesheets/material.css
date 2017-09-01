@@ -36,6 +36,33 @@ http://google.github.io/material-design-icons/
 .material-icons.md-light { color: rgba(255, 255, 255, 1); }
 .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
 
+/*
+material.grey-pink.min.css
+
+@media screen and (max-width: 1024px)
+material.grey-pink.min.css:8
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
+    padding: 16px;
+}
+
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
+    display: block;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    padding: 16px 40px;
+    margin: 0;
+    color: #757575;
+}
+
+.mdl-layout__header-row .mdl-navigation__link {
+    display: block;
+    color: rgb(66,66,66);
+    line-height: 64px;
+    padding: 0 24px;
+}
+ */
+
 
 /*
 demo-layout-transparent
