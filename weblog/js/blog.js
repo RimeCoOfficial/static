@@ -9585,8 +9585,7 @@ uniblog.common.component("searchController", {
     init: function() {
         this.options = {
             allowEmptySearch: !1,
-            // endpoint: uniblog.common.constants.SEARCH_API,
-            endpoint: endpoint,
+            endpoint: uniblog.common.constants.SEARCH_API,
             searchBar: uniblog.common.events.searchBar.onSearch
         };
         goog.object.extend(this.options, uniblog.utils.getDataOptions(this.handler));
