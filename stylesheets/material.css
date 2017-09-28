@@ -96,21 +96,33 @@ demo-layout--fixed-drawer
     border-color: white;
 }
 
-.demo-layout-landing .mdl-layout__header-row {
+ {
     padding-left: 40px;
 }
 
-.demo-layout-landing.is-small-screen .mdl-layout__header-row {
-    padding-left: 60px;
+.demo-layout-page-about .founder-image {
+    background: url('../images/IMG_0593 copy.JPG') center / cover;
+    height: 500px;
+}
+.demo-layout-page-about.is-small-screen .founder-image {
+    height: 200px;
 }
 
+.demo-layout-page-about .mdl-layout__header-row,
+.demo-layout-landing .mdl-layout__header-row,
 .demo-layout-dashboard .mdl-layout__header-row,
 .demo-layout-user .mdl-layout__header-row,
 .demo-layout-start .mdl-layout__header-row,
 .demo-layout-intro .mdl-layout__header-row,
 .demo-layout-auth .mdl-layout__header-row,
-.demo-layout-about .mdl-layout__header-row {
+.demo-layout-page-legal .mdl-layout__header-row,
+.demo-layout-page .mdl-layout__header-row {
     padding-left: 40px;
+}
+
+.demo-layout-page-about.is-small-screen .mdl-layout__header-row,
+.demo-layout-landing.is-small-screen .mdl-layout__header-row {
+    padding-left: 60px;
 }
 
 .demo-layout-dashboard.is-small-screen .mdl-layout__header-row,
@@ -118,7 +130,8 @@ demo-layout--fixed-drawer
 .demo-layout-start.is-small-screen .mdl-layout__header-row,
 .demo-layout-intro.is-small-screen .mdl-layout__header-row,
 .demo-layout-auth.is-small-screen .mdl-layout__header-row,
-.demo-layout-about.is-small-screen .mdl-layout__header-row {
+.demo-layout-page-legal.is-small-screen .mdl-layout__header-row,
+.demo-layout-page.is-small-screen .mdl-layout__header-row {
     padding-left: 16px;
 }
 
@@ -159,6 +172,10 @@ demo-card-event
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+}
+
+.demo-layout-dashboard .demo-card-event {
+    background: url('../third-party/giphy.com/ezgif.com-hexagon-MK4q2AR4alX9K.gif') center / cover;
 }
 
 /*
